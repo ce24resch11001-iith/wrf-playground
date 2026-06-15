@@ -1,6 +1,6 @@
 # wrf-playground
 
-# 🌍 WRF Workflows
+# WRF Workflows
 
 A collection of practical, reproducible workflows for working with the Weather Research and Forecasting (WRF) model for atmospheric and climate research applications.
 
@@ -8,7 +8,7 @@ This repository serves as a hands-on reference for setting up, running, and anal
 
 ---
 
-## 👤 Author
+## Author
 
 **Uppucharla Venkata Rohith**  
 PhD Research Scholar  
@@ -18,13 +18,13 @@ Department of Civil Engineering
 Indian Institute of Technology Hyderabad, India  
 
 
-🔗 Academic Portfolio: https://sites.google.com/view/uvrohith  
+Academic Portfolio: https://sites.google.com/view/uvrohith  
 
 Lab Member: *Multidisciplinary Exploration of Geospatial Hydrometeorological Applications (MEGHA)*  
 
 ---
 
-## 🌟 Research Focus
+## Research Focus
 
 My research focuses on understanding the interactions between:
 
@@ -42,46 +42,46 @@ to investigate urban–atmosphere feedback mechanisms and their influence on reg
 
 ---
 
-## 🌦️ What this repository covers
+## What this repository covers
 
 This repository documents end-to-end WRF workflows including:
 
-### 🧩 Model Setup & Installation
+### Model Setup & Installation
 - WRF and WPS compilation on Linux/HPC systems  
 - NetCDF, MPI, and dependency configuration  
 - Common installation and runtime issues  
 
-### 🌍 Data Preprocessing
+### Data Preprocessing
 - ERA5 reanalysis processing for WRF input  
 - NCEP FNL dataset usage  
 - Vtable configuration  
 - GRIB to intermediate file processing  
 
-### 🏗️ WPS Workflow
+### WPS Workflow
 - Domain setup using `geogrid`  
 - `ungrib` and `metgrid` execution  
 - Static dataset handling  
 - Troubleshooting WPS errors  
 
-### 🌬️ WRF Simulation Runs
+### WRF Simulation Runs
 - `real.exe` and `wrf.exe` execution  
 - Namelist configuration  
 - Nested domain setups  
 - Debugging runtime issues  
 
-### 🏙️ Physics Configurations
+### Physics Configurations
 - Urban schemes (SLUCM and NO-URB cases)  
 - Sensitivity experiments  
 - Surface and boundary layer parameterization impacts  
 
-### 📊 Post-processing
+### Post-processing
 - WRF output (`wrfout`) analysis  
 - Basic visualization workflows  
 - Data extraction for research studies  
 
 ---
 
-## 🧠 Purpose of this repository
+## Purpose of this repository
 
 This repository is created to:
 
@@ -92,7 +92,7 @@ This repository is created to:
 
 ---
 
-## ⚙️ Who this is for
+## Who this is for
 
 This repository is useful for:
 
@@ -103,7 +103,7 @@ This repository is useful for:
 
 ---
 
-## ⚠️ Important Note
+## Important Note
 
 This repository reflects practical research workflows and experimental configurations used in real atmospheric modeling studies. Results and setups may vary depending on system architecture, dataset versions, and simulation requirements.
 
@@ -111,7 +111,7 @@ Always adapt configurations to your local HPC or computing environment.
 
 ---
 
-## 🚀 Future Updates
+## Future Updates
 
 Planned additions include:
 
@@ -123,13 +123,13 @@ Planned additions include:
 
 ---
 
-## 🤝 Contributions
+## Contributions
 
 Suggestions, improvements, and discussions are welcome.  
 Feel free to open issues or fork this repository.
 
 ---
 
-## 📬 Contact
+## Contact
 
-🔗 https://sites.google.com/view/uvrohith
+https://sites.google.com/view/uvrohith
