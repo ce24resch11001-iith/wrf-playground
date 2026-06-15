@@ -17,7 +17,6 @@ Hydraulics and Water Resources Engineering (HWRE)
 Department of Civil Engineering  
 Indian Institute of Technology Hyderabad, India  
 
-Supervisor: Dr. Shruti Upadhyaya  
 
 🔗 Academic Portfolio: https://sites.google.com/view/uvrohith  
 
