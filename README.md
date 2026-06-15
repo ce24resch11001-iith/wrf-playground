@@ -18,9 +18,7 @@ Department of Civil Engineering
 Indian Institute of Technology Hyderabad, India  
 
 
-Academic Portfolio: https://sites.google.com/view/uvrohith  
-
-Lab Member: *Multidisciplinary Exploration of Geospatial Hydrometeorological Applications (MEGHA)*  
+Academic Portfolio: https://sites.google.com/view/uvrohith
 
 ---
 
