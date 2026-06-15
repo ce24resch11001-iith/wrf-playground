@@ -13,5 +13,5 @@ This section contains installation and compilation workflows for the Weather Res
 
 * Always verify compiler and library compatibility before compilation.
 * Follow the guides in the order presented.
-* Refer to troubleshooting documentation for common installation issues. (common-pitfalls-and-solutions.md)
+* Refer to troubleshooting documentation for common installation issues (common-pitfalls-and-solutions.md).
 
