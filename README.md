@@ -115,3 +115,28 @@ wrf-workflows/
 ├── physics/
 ├── postprocessing/
 └── docs/
+
+
+## ⚠️ Important Note
+
+This repository reflects practical research workflows and experimental configurations used in real atmospheric modeling studies. Results and setups may vary depending on system architecture, dataset versions, and simulation requirements.
+
+Always adapt configurations to your local HPC or computing environment.
+
+🚀 Future Updates
+
+Planned additions include:
+
+WRF-Chem workflows
+Advanced urban climate experiments
+Case study simulations over Indian cities
+Performance optimization for HPC systems
+Visualization templates for analysis
+🤝 Contributions
+
+Suggestions, improvements, and discussions are welcome.
+Feel free to open issues or fork this repository.
+
+📬 Contact
+
+🔗 https://sites.google.com/view/uvrohith
