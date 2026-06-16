@@ -1,17 +1,23 @@
-# Installation
+# Installation and Compilation
 
-This section contains installation and compilation workflows for the Weather Research and Forecasting (WRF) modeling system and its supporting components.
+This section contains installation and compilation workflows for the Weather Research and Forecasting (WRF) modeling system, WRF-Chem, and supporting components.
 
 ## Available Guides
 
 1. **Build WRF 4.7.1 + WPS 4.6.0**
-   Comprehensive step-by-step guide for compiling WRF 4.7.1 and WPS 4.6.0 with GNU compilers, OpenMPI, NetCDF, HDF5, Jasper, and LibPNG on Linux/HPC systems.
+   Comprehensive step-by-step guide for compiling WRF 4.7.1 and WPS 4.6.0 with GNU compilers, MPI, NetCDF, HDF5, Jasper, and LibPNG on Linux/HPC systems.
 
-   * File: `wrf471_wps460_build.md`
+   * File: `wrf4.7.1_wps4.6.0_build.md`
+
+2. **Build WRF-Chem 4.5 + WPS 4.5**
+   Comprehensive guide for compiling WRF-Chem 4.5 with chemistry and KPP support, along with WPS 4.5 and all required dependencies (Zlib, HDF5, NetCDF-C, NetCDF-Fortran, Jasper, and LibPNG) on Linux/HPC systems.
+
+   * File: `wrfchem4.5_wps4.5_build.md`
 
 ## Notes
 
-* Always verify compiler and library compatibility before compilation.
+* Always verify compiler, MPI, and library compatibility before compilation.
 * Follow the guides in the order presented.
-* Refer to troubleshooting documentation for common installation issues (common-pitfalls-and-solutions.md).
-
+* Build and validate all prerequisite libraries before compiling WRF or WRF-Chem.
+* For WRF-Chem installations, ensure that chemistry and KPP support are enabled during configuration.
+* Refer to troubleshooting documentation for common installation issues (`common-pitfalls-and-solutions.md`).
