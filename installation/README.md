@@ -20,4 +20,4 @@ This section contains installation and compilation workflows for the Weather Res
 * Follow the guides in the order presented.
 * Build and validate all prerequisite libraries before compiling WRF or WRF-Chem.
 * For WRF-Chem installations, ensure that chemistry and KPP support are enabled during configuration.
-* Refer to troubleshooting documentation for common installation issues (`common-pitfalls-and-solutions.md`).
+* Refer to troubleshooting documentation for common installation issues (`common_errors.md`).
