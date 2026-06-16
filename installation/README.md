@@ -9,10 +9,10 @@ This section contains installation and compilation workflows for the Weather Res
 
    * File: `wrf4.7.1_wps4.6.0_build.md`
 
-2. **Build WRF-Chem 4.5 + WPS 4.5**
-   Comprehensive guide for compiling WRF-Chem 4.5 with chemistry and KPP support, along with WPS 4.5 and all required dependencies (Zlib, HDF5, NetCDF-C, NetCDF-Fortran, Jasper, and LibPNG) on Linux/HPC systems.
+2. **Build WRF-Chem 4.7.1 + WPS 4.6.0**
+   Comprehensive guide for compiling WRF-Chem 4.7.1 with chemistry and KPP support, along with WPS 4.6.0 and all required dependencies (Flex, Zlib, HDF5, NetCDF-C, NetCDF-Fortran, Jasper, and LibPNG) on Linux/HPC systems.
 
-   * File: `wrfchem4.5_wps4.5_build.md`
+   * File: `wrfchem4.7.1_wps4.6.0_build.md`
 
 ## Notes
 
