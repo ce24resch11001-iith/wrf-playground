@@ -15,8 +15,8 @@ This guide documents the compilation and installation of WRF-Chem 4.5 and WPS 4.
 | NetCDF-Fortran | 4.6.0                             |
 | Jasper         | 1.900.1                           |
 | LibPNG         | 1.6.39                            |
-| WRF-Chem       | 4.5                               |
-| WPS            | 4.5                               |
+| WRF-Chem       | 4.7.1                             |
+| WPS            | 4.6.0                             |
 
 ---
 
