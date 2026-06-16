@@ -267,7 +267,101 @@ Run geogrid.exe
           |
           ↓
 Generate geo_em.d0*.nc
+          |
+          ↓
+Check LANDUSEF / LU_INDEX
+          |
+          ↓
+Configure WRF LCZ urban parameters
+          |
+          ↓
+Run real.exe and wrf.exe
 ```
+
+---
+
+# WRF Urban Parameterization: URB_PARAM_LCZ.TBL
+
+For LCZ-based urban simulations, WRF uses:
+
+```
+URB_PARAM_LCZ.TBL
+```
+
+This table contains urban parameters associated with different LCZ classes.
+
+Users can modify these parameters depending on the objectives of their study, including urban morphology and surface property representation.
+
+The file is located in:
+
+```
+WRF/run/URB_PARAM_LCZ.TBL
+```
+
+or copied from:
+
+```
+WRF/run/
+```
+
+---
+
+# Activating LCZ Urban Parameters
+
+The LCZ urban parameter table is activated through the WRF namelist:
+
+```fortran
+&physics
+ use_wudapt_lcz = 1
+/
+```
+
+When:
+
+```
+use_wudapt_lcz = 1
+```
+
+WRF uses:
+
+```
+URB_PARAM_LCZ.TBL
+```
+
+for LCZ-based urban parameters.
+
+When:
+
+```
+use_wudapt_lcz = 0
+```
+
+WRF uses the standard urban parameter table:
+
+```
+URB_PARAM.TBL
+```
+
+---
+
+# Example WRF Configuration
+
+```fortran
+&physics
+
+ sf_urban_physics = 1
+ use_wudapt_lcz   = 1
+
+/
+```
+
+Using:
+
+```
+use_wudapt_lcz = 1
+```
+
+allows the LCZ categories (51–61) from the CGLC-MODIS-LCZ dataset to interact with the urban canopy parameterization.
 
 ---
 
@@ -359,4 +453,18 @@ Bulletin of the American Meteorological Society, 93(12), 1879–1900.
 
 CGLC-MODIS-LCZ provides improved urban surface representation for WRF simulations by combining detailed land-cover information with LCZ-based urban classification.
 
-This workflow is particularly useful for high-resolution urban simulations over cities.
+The complete workflow involves:
+
+```
+CGLC-MODIS-LCZ
+        ↓
+WPS geographical preprocessing
+        ↓
+LCZ-aware land-use generation
+        ↓
+WRF urban parameterization
+        ↓
+Urban atmosphere simulation
+```
+
+This workflow is particularly useful for high-resolution urban simulations over cities where urban morphology strongly influences meteorological and air-quality processes.
