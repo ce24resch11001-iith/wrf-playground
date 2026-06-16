@@ -69,6 +69,27 @@ export HDF5=$DIR
 ulimit -s unlimited
 ```
 
+
+# Build FLEX
+```bash
+
+cd $WRFCHEM_HOME/Downloads
+
+wget -nc https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz
+
+tar -xzf flex-2.6.4.tar.gz
+
+cd flex-2.6.4
+
+./configure --prefix=$DIR
+
+make -j8
+make install
+
+export FLEX=$DIR/bin/flex
+
+export FLEX_LIB_DIR=$DIR/lib
+```
 ---
 
 # Build ZLIB
