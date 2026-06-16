@@ -1,4 +1,4 @@
-# Build WRF-Chem 4.5 + WPS 4.5
+# Build WRF-Chem 4.7.1 + WPS 4.6.0
 
 This guide documents the compilation and installation of WRF-Chem 4.5 and WPS 4.5 using GNU compilers and MPI wrappers available on Linux/HPC systems.
 
@@ -8,7 +8,7 @@ This guide documents the compilation and installation of WRF-Chem 4.5 and WPS 4.
 | -------------- | --------------------------------- |
 | GCC            | System GCC                        |
 | MPI            | Intel MPI wrappers (mpicc/mpif90) |
-| Flex           | System Flex 2.6.1                 |
+| Flex           | 2.6.4                             |
 | Zlib           | 1.2.13                            |
 | HDF5           | 1.13.2                            |
 | NetCDF-C       | 4.9.0                             |
@@ -87,7 +87,6 @@ make -j8
 make install
 
 export FLEX=$DIR/bin/flex
-
 export FLEX_LIB_DIR=$DIR/lib
 ```
 ---
@@ -252,18 +251,18 @@ mpif90 --version
 
 ---
 
-# Build WRF-Chem 4.5
+# Build WRF-Chem 4.7.1
 
 ```bash
 cd $WRFCHEM_HOME/Downloads
 
 wget -nc \
-https://github.com/wrf-model/WRF/releases/download/v4.5/v4.5.tar.gz \
--O wrf-4.5.tar.gz
+https://github.com/wrf-model/WRF/releases/download/v4.7.1/v4.7.1.tar.gz \
+-O wrf-4.7.1.tar.gz
 
-tar -xzf wrf-4.5.tar.gz -C $WRFCHEM_HOME
+tar -xzf wrf-4.7.1.tar.gz -C $WRFCHEM_HOME
 
-cd $WRFCHEM_HOME/WRFV4.5
+cd $WRFCHEM_HOME/WRFV4.7.1
 ```
 
 ## Enable Chemistry
@@ -277,7 +276,7 @@ export WRF_KPP=1
 
 export YACC='/usr/bin/yacc -d'
 
-export KPP_HOME=$WRFCHEM_HOME/WRFV4.5/chem/KPP/kpp/kpp-2.1
+export KPP_HOME=$WRFCHEM_HOME/WRFV4.7.1/chem/KPP/kpp/kpp-2.1
 
 export PATH=$KPP_HOME/bin:$PATH
 
@@ -318,7 +317,7 @@ Choose:
 ## Verify WRF-Chem
 
 ```bash
-export WRF_DIR=$WRFCHEM_HOME/WRFV4.5
+export WRF_DIR=$WRFCHEM_HOME/WRFV4.7.1
 
 ls -lah main/*.exe
 ```
@@ -337,27 +336,28 @@ tc.exe
 # Build Emission Converter
 
 ```bash
-cd $WRFCHEM_HOME/WRFV4.5
+cd $WRFCHEM_HOME/WRFV4.7.1
 
 ./compile emi_conv 2>&1 | tee emission_compile.log
 ```
 
 ---
 
-# Build WPS 4.5
+# Build WPS 4.6.0
 
 ```bash
 cd $WRFCHEM_HOME/Downloads
 
 wget -nc \
-https://github.com/wrf-model/WPS/archive/refs/tags/v4.5.tar.gz \
--O wps-4.5.tar.gz
+https://github.com/wrf-model/WPS/archive/refs/tags/v4.6.0.tar.gz \
+-O wps-4.6.0.tar.gz
 
-tar -xzf wps-4.5.tar.gz -C $WRFCHEM_HOME
+tar -xzf wps-4.6.0.tar.gz -C $WRFCHEM_HOME
 
-cd $WRFCHEM_HOME/WPS-4.5
+cd $WRFCHEM_HOME/WPS-4.6.0
 
-export WRF_DIR=$WRFCHEM_HOME/WRFV4.5
+export WRF_DIR=$WRFCHEM_HOME/WRFV4.7.1
+
 ```
 
 ## Configure
@@ -407,7 +407,7 @@ mpif90 --version
 
 ls $WRF_DIR/main/*.exe
 
-ls $WRFCHEM_HOME/WPS-4.5/*.exe
+ls $WRFCHEM_HOME/WPS-4.6.0/*.exe
 ```
 
 You are finished when all of the following exist.
