@@ -9,7 +9,7 @@ It combines:
 1. **Copernicus Global Land Service Land Cover (CGLC)** converted to MODIS IGBP land-use classes.
 2. **Local Climate Zone (LCZ)** classification representing urban morphology.
 
-The dataset improves representation of surface heterogeneity, particularly for urban simulations involving:
+The dataset improves the representation of surface heterogeneity, particularly for urban simulations involving:
 
 - Urban climate
 - Urban heat islands
@@ -65,7 +65,7 @@ This document describes the WRF/WPS implementation workflow and does not redistr
 
 ## 1. CGLC-MODIS Land Cover
 
-The CGLC product is converted into MODIS IGBP-compatible land-use classes.
+The CGLC product is converted into MODIS IGBP-compatible land-use classes for WRF applications.
 
 It represents:
 
@@ -201,7 +201,27 @@ File:
 WPS/geogrid/GEOGRID.TBL.ARW_LCZ
 ```
 
-Entry:
+Enable the LCZ configuration by creating a symbolic link:
+
+```bash
+cd WPS/geogrid/
+
+ln -s GEOGRID.TBL.ARW_LCZ GEOGRID.TBL
+```
+
+Verify:
+
+```bash
+ls -l GEOGRID.TBL
+```
+
+Expected output:
+
+```
+GEOGRID.TBL -> GEOGRID.TBL.ARW_LCZ
+```
+
+Dataset entry:
 
 ```text
 name=LANDUSEF
@@ -216,13 +236,15 @@ name=LANDUSEF
 
 # namelist.wps Configuration
 
+Activate CGLC-MODIS-LCZ using:
+
 ```fortran
 &geogrid
  geog_data_res = 'cglc_modis_lcz+default'
 /
 ```
 
-`+default` allows WPS to use default geographical datasets where CGLC-MODIS-LCZ coverage is unavailable.
+The `+default` option allows WPS to use default geographical datasets where CGLC-MODIS-LCZ coverage is unavailable.
 
 ---
 
@@ -267,10 +289,10 @@ Examples:
 Images:
 
 ```
-images/hyderabad_cglc_lcz_1km.png
-images/delhi_cglc_lcz_1km.png
-images/mumbai_cglc_lcz_1km.png
-images/kolkata_cglc_lcz_1km.png
+images/hyderabad_modis_cglc_lcz_1km.png
+images/delhi_modis_cglc_lcz_1km.png
+images/mumbai_modis_cglc_lcz_1km.png
+images/kolkata_modis_cglc_lcz_1km.png
 ```
 
 ---
@@ -289,11 +311,11 @@ Check:
 geo_em.d01.nc
 ```
 
-Variables:
+Important variables:
 
 ```
 LANDUSEF
-LANDUSE
+LU_INDEX
 ```
 
 Example:
@@ -306,20 +328,23 @@ ncdump -h geo_em.d01.nc | grep LANDUSE
 
 # References
 
-1. Buchhorn, M., et al. (2021).  
-Copernicus Global Land Service Land Cover 100m.
+1. Demuzere, M., He, C., Martilli, A., & Zonato, A. (2023).  
+Technical documentation for the hybrid 100-m global land cover dataset with Local Climate Zones for WRF (1.0.0). Zenodo.  
+https://doi.org/10.5281/zenodo.7670792
 
-2. Demuzere, M., et al. (2022).  
+2. Buchhorn, M., Smets, B., Bertels, L., De Roo, B., Lesiv, M., Tsendbazar, N.-E., Li, L., & Tarko, A. (2021).  
+Copernicus Global Land Service Land Cover 100m: version 3 Globe 2015-2019.
+
+3. Demuzere, M., Kittner, J., Martilli, A., et al. (2022).  
 A global map of local climate zones to support earth system modelling and urban-scale environmental science.  
 Earth System Science Data, 14, 3835–3873.
 
-3. Demuzere, M., He, C., Martilli, A., & Zonato, A. (2023).  
-A hybrid 100-m global land cover dataset with Local Climate Zones for WRF.
+4. Stewart, I. D., & Oke, T. R. (2012).  
+Local Climate Zones for Urban Temperature Studies.  
+Bulletin of the American Meteorological Society, 93(12), 1879–1900.
 
 ---
 
 # Notes
 
-CGLC-MODIS-LCZ provides improved urban surface representation for WRF simulations by combining detailed land-cover information with LCZ-based urban classification.
-
-This workflow is particularly useful for high-resolution urban simulations over cities such as Hyderabad, Delhi, Mumbai, and Kolkata.
+CGLC-MODIS-LCZ provides improved urban surface representation for WRF simulations by combining detailed land-cover information with LCZ-based urban classification. This workflow is particularly useful for high-resolution urban simulations over cities.
