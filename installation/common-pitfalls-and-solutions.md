@@ -1,12 +1,12 @@
-# Common Installation Pitfalls and Solutions for WRF & WPS
+# Common Installation Pitfalls and Solutions for WRF, WRF-Chem & WPS
 
-This guide summarizes common issues encountered while installing and compiling WRF and WPS on Linux and HPC systems.
+This guide summarizes common issues encountered while installing and compiling WRF, WRF-Chem, and WPS on Linux and HPC systems.
 
 ---
 
-## 1. NetCDF Not Found
+# 1. NetCDF Not Found
 
-### Error
+## Error
 
 ```bash
 netcdf.inc not found
@@ -18,33 +18,27 @@ or
 cannot find -lnetcdf
 ```
 
-### Solution
+## Solution
 
-Verify the NetCDF environment variable:
+Verify:
 
 ```bash
 echo $NETCDF
-```
 
-Check that NetCDF is properly installed:
-
-```bash
 nc-config --all
 nf-config --all
-```
 
-Confirm the presence of required directories:
-
-```bash
 ls $NETCDF/include
 ls $NETCDF/lib
 ```
 
+Ensure NetCDF-C and NetCDF-Fortran were installed successfully and that `$NETCDF` points to the correct location.
+
 ---
 
-## 2. HDF5 Library Errors
+# 2. HDF5 Library Errors
 
-### Error
+## Error
 
 ```bash
 cannot find -lhdf5
@@ -56,28 +50,24 @@ or
 HDF5 libraries not found
 ```
 
-### Solution
+## Solution
 
 Verify:
 
 ```bash
 echo $HDF5
-```
 
-Check installation:
-
-```bash
 ls $HDF5/include
 ls $HDF5/lib
 ```
 
-Ensure HDF5 was compiled using the same compiler and MPI environment as NetCDF.
+HDF5 should be built using the same compiler and MPI environment used for NetCDF and WRF.
 
 ---
 
-## 3. WPS Cannot Find Jasper Libraries
+# 3. Jasper and GRIB2 Support Issues
 
-### Error
+## Error
 
 ```bash
 Cannot find jasper libraries
@@ -89,39 +79,23 @@ or
 GRIB2 support not available
 ```
 
-### Solution
-
-Export:
-
-```bash
-export JASPERLIB=/path/to/lib
-export JASPERINC=/path/to/include
-```
-
-Verify:
-
-```bash
-ls $JASPERLIB/libjasper*
-ls $JASPERINC/jasper*
-```
-
-Reconfigure WPS after setting the variables.
-
----
-
-## 4. Missing GRIB2 Support
-
-### Symptom
-
-Only `geogrid.exe` is created while `ungrib.exe` fails to compile.
-
-### Solution
+## Solution
 
 Verify:
 
 ```bash
 echo $JASPERLIB
 echo $JASPERINC
+
+ls $JASPERLIB/libjasper*
+ls $JASPERINC/jasper*
+```
+
+Export if necessary:
+
+```bash
+export JASPERLIB=/path/to/lib
+export JASPERINC=/path/to/include
 ```
 
 Then rebuild WPS:
@@ -132,223 +106,17 @@ Then rebuild WPS:
 ./compile
 ```
 
----
-
-## 5. WRF Compilation Fails
-
-### Symptom
-
-Compilation stops before generating executables.
-
-### Solution
-
-Inspect the compilation log:
-
-```bash
-grep -i error compile.log
-```
-
-Verify compiler configuration:
-
-```bash
-which gcc
-which gfortran
-which mpicc
-which mpif90
-```
-
-Ensure all libraries were built using the same compiler family.
+If only `geogrid.exe` is created while `ungrib.exe` fails, the issue is usually related to Jasper or GRIB2 support.
 
 ---
 
-## 6. Missing WRF Executables After Compilation
+# 4. WRF-Chem Not Enabled
 
-### Symptom
+## Issue
 
-One or more expected executables are missing:
+WRF compiles successfully but chemistry options are unavailable or chemistry-related files are not compiled.
 
-```text
-real.exe
-wrf.exe
-ndown.exe
-tc.exe
-```
-
-### Solution
-
-Check the final lines of:
-
-```bash
-compile.log
-```
-
-Look for the first compilation error and resolve it before recompiling.
-
----
-
-## 7. Missing WPS Executables After Compilation
-
-### Symptom
-
-One or more expected executables are missing:
-
-```text
-geogrid.exe
-ungrib.exe
-metgrid.exe
-```
-
-### Solution
-
-Review:
-
-```bash
-grep -i error configure.wps
-grep -i error compile.log
-```
-
-Verify Jasper and NetCDF paths.
-
----
-
-## 8. Compiler Mismatch
-
-### Symptom
-
-Compilation errors occur even though dependencies are installed.
-
-### Cause
-
-Libraries were compiled using different compiler versions.
-
-### Solution
-
-Verify:
-
-```bash
-which gcc
-which gfortran
-gcc --version
-gfortran --version
-```
-
-Compile all dependencies, WRF, and WPS using the same compiler environment.
-
----
-
-## 9. MPI Configuration Issues
-
-### Error
-
-```bash
-mpif90 not found
-```
-
-or
-
-```bash
-MPI compilation failed
-```
-
-### Solution
-
-Load MPI modules:
-
-```bash
-module load openmpi
-```
-
-Verify:
-
-```bash
-which mpif90
-mpif90 --version
-```
-
----
-
-## 10. Environment Variables Not Set
-
-### Symptom
-
-WRF or WPS cannot locate required libraries.
-
-### Solution
-
-Verify:
-
-```bash
-echo $NETCDF
-echo $HDF5
-echo $JASPERLIB
-echo $JASPERINC
-```
-
-Ensure all paths point to the correct installation directories.
-
----
-
-## Recommended Pre-Compilation Checks
-
-Before compiling WRF or WPS, verify:
-
-```bash
-which gcc
-which gfortran
-which mpicc
-which mpif90
-
-nc-config --all
-nf-config --all
-
-echo $NETCDF
-echo $HDF5
-echo $JASPERLIB
-echo $JASPERINC
-```
-
----
-
-## Final Verification
-
-### WRF
-
-```bash
-ls main/*.exe
-```
-
-Expected:
-
-```text
-real.exe
-wrf.exe
-ndown.exe
-tc.exe
-```
-
-### WPS
-
-```bash
-ls *.exe
-```
-
-Expected:
-
-```text
-geogrid.exe
-ungrib.exe
-metgrid.exe
-```
-
-If all executables are present, the installation was successful.
-
-## 11. WRF-Chem Not Enabled
-
-### Symptom
-
-WRF compiles successfully, but chemistry options are unavailable or chemistry-related files are not compiled.
-
-### Solution
+## Solution
 
 Verify:
 
@@ -364,13 +132,13 @@ Expected:
 1
 ```
 
-After running `./configure`, verify:
+Check:
 
 ```bash
 grep WRF_CHEM configure.wrf
 ```
 
-Expected output should contain:
+Expected:
 
 ```text
 WRF_CHEM = 1
@@ -378,17 +146,20 @@ WRF_CHEM = 1
 -DWRF_KPP
 ```
 
-If chemistry support is missing, export the variables again and rerun:
+If chemistry support is missing:
 
 ```bash
+export WRF_CHEM=1
+export WRF_KPP=1
+
 ./configure
 ```
 
 ---
 
-## 12. Flex Not Found During WRF-Chem Compilation
+# 5. Flex Not Found During WRF-Chem Compilation
 
-### Error
+## Error
 
 ```bash
 flex: command not found
@@ -400,7 +171,7 @@ or
 lex.yy.c generation failed
 ```
 
-### Solution
+## Solution
 
 Verify:
 
@@ -409,7 +180,7 @@ which flex
 flex --version
 ```
 
-If using a local Flex installation:
+If using a local installation:
 
 ```bash
 export FLEX=/path/to/flex
@@ -417,23 +188,127 @@ export FLEX_LIB_DIR=/path/to/lib
 export PATH=/path/to/bin:$PATH
 ```
 
-Reconfigure and recompile WRF-Chem after correcting the Flex path.
+Reconfigure and recompile after correcting the Flex path.
 
 ---
 
-## 13. Dirty Source Tree After Failed Compilation
+# 6. Compiler and MPI Mismatch
 
-### Symptom
+## Error
 
-Compilation continues to fail even after fixing the original problem.
+Compilation, linking, or runtime failures occur despite successful dependency installation.
 
-### Cause
+## Common Causes
 
-Old object files and module files remain from a previous failed build.
+* Libraries built with different compiler versions
+* Libraries built with different MPI implementations
+* MPI wrappers pointing to unexpected compilers
 
-### Solution
+Examples:
 
-Clean the source tree completely:
+```text
+OpenMPI + Intel MPI
+MPICH + OpenMPI
+GCC 8 libraries + GCC 12 WRF build
+```
+
+## Solution
+
+Verify:
+
+```bash
+which gcc
+which gfortran
+
+gcc --version
+gfortran --version
+
+which mpicc
+which mpif90
+
+mpicc --version
+mpif90 --version
+```
+
+Check WRF configuration:
+
+```bash
+grep "^SCC" configure.wrf
+grep "^SFC" configure.wrf
+grep "^DM_FC" configure.wrf
+```
+
+Expected:
+
+```text
+SCC = gcc
+SFC = gfortran
+DM_FC = mpif90 -f90=$(SFC)
+```
+
+Build NetCDF, HDF5, WRF, and WPS using a consistent compiler and MPI stack.
+
+---
+
+# 7. Environment Variables Not Set
+
+## Error
+
+WRF or WPS cannot locate required libraries.
+
+## Solution
+
+Verify:
+
+```bash
+echo $NETCDF
+echo $HDF5
+echo $JASPERLIB
+echo $JASPERINC
+echo $FLEX
+```
+
+If necessary:
+
+```bash
+export NETCDF=/path/to/Libs
+export HDF5=/path/to/Libs
+
+export JASPERLIB=/path/to/Libs/lib
+export JASPERINC=/path/to/Libs/include
+
+export FLEX=/path/to/Libs/bin/flex
+```
+
+Consider storing them in:
+
+```bash
+~/.bashrc
+```
+
+or
+
+```bash
+~/wrf_env.sh
+```
+
+and sourcing them before compilation.
+
+---
+
+# 8. Dirty Source Tree After Failed Compilation
+
+## Error
+
+Compilation continues to fail even after the original problem has been fixed.
+
+## Cause
+
+Old object files, module files, or dependency information remain from a previous build.
+
+## Solution
+
+Perform a complete cleanup:
 
 ```bash
 ./clean -a
@@ -449,40 +324,200 @@ Then rerun:
 ./compile em_real
 ```
 
-A clean rebuild often resolves persistent compilation issues.
+This is especially important after changing:
+
+* Compiler versions
+* MPI implementations
+* NetCDF installations
+* HDF5 installations
+* WRF-Chem settings
+* KPP settings
 
 ---
 
-## 14. Mixed MPI Environments
+# 9. Missing Chemistry Source Dependencies
 
-### Symptom
-
-Compilation succeeds, but linking fails or executables crash at runtime.
-
-### Cause
-
-Libraries were compiled using one MPI implementation while WRF was compiled using another.
-
-Examples:
-
-```text
-OpenMPI + Intel MPI
-MPICH + OpenMPI
-```
-
-### Solution
-
-Verify:
+## Error
 
 ```bash
+No rule to make target 'chem/module_input_tracer.o'
+```
+
+or
+
+```bash
+No rule to make target 'chem/module_input_tracer_data.o'
+```
+
+or
+
+```bash
+No rule to make target 'chem/module_data_mosaic_asect.o'
+```
+
+## Solution
+
+Verify source files exist:
+
+```bash
+find chem -name "module_input_tracer*"
+
+find chem -name "module_data_mosaic_asect*"
+```
+
+Expected:
+
+```text
+chem/module_input_tracer.F
+chem/module_input_tracer_data.F
+chem/module_data_mosaic_asect.F
+chem/module_data_mosaic_asecthp.F
+```
+
+If files exist, perform a complete clean build:
+
+```bash
+./clean -a
+
+find . -name "*.o" -delete
+find . -name "*.mod" -delete
+
+./configure
+./compile em_real
+```
+
+These errors are commonly caused by stale dependency information.
+
+---
+
+# 10. Compilation Completes but Executables Are Missing
+
+## Error
+
+One or more expected executables are not created.
+
+### WRF
+
+Expected:
+
+```text
+real.exe
+wrf.exe
+ndown.exe
+tc.exe
+```
+
+### WPS
+
+Expected:
+
+```text
+geogrid.exe
+ungrib.exe
+metgrid.exe
+```
+
+## Solution
+
+Search for the first actual error:
+
+```bash
+grep -ni "error" wrfchem_compile.log | head -50
+```
+
+or
+
+```bash
+grep -ni "error" compile.log | head -50
+```
+
+The first error is usually the root cause. Later errors are often secondary failures.
+
+---
+
+# Recommended Pre-Compilation Checks
+
+Before launching a long compilation:
+
+```bash
+which gcc
+which gfortran
 which mpicc
 which mpif90
 
-mpicc --version
+gcc --version
+gfortran --version
+
 mpif90 --version
+
+which flex
+flex --version
+
+nc-config --all
+nf-config --all
+
+echo $NETCDF
+echo $HDF5
+echo $JASPERLIB
+echo $JASPERINC
+echo $WRF_CHEM
+echo $WRF_KPP
 ```
 
-Ensure NetCDF, HDF5, WRF, and WPS were all built using the same MPI wrappers and compiler family.
+Also verify:
 
-Avoid mixing MPI implementations within the same software stack.
+```bash
+grep WRF_CHEM configure.wrf
 
+grep "^SCC" configure.wrf
+grep "^SFC" configure.wrf
+grep "^DM_FC" configure.wrf
+```
+
+Confirm:
+
+```text
+WRF_CHEM = 1
+WRF_KPP enabled
+Correct NetCDF paths
+Correct HDF5 paths
+Correct Jasper paths
+Flex available
+MPI wrappers available
+Expected compiler configuration
+```
+
+---
+
+# Final Verification
+
+## WRF
+
+```bash
+ls main/*.exe
+```
+
+Expected:
+
+```text
+real.exe
+wrf.exe
+ndown.exe
+tc.exe
+```
+
+## WPS
+
+```bash
+ls *.exe
+```
+
+Expected:
+
+```text
+geogrid.exe
+ungrib.exe
+metgrid.exe
+```
+
+If all expected executables are present, the installation was successful.
