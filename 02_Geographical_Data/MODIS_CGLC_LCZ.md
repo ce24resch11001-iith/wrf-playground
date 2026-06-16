@@ -280,12 +280,12 @@ Run real.exe and wrf.exe
 
 ---
 
-# WRF Urban Parameterization: URB_PARAM_LCZ.TBL
+# WRF Urban Parameterization: URBPARAM_LCZ.TBL
 
 For LCZ-based urban simulations, WRF uses:
 
 ```
-URB_PARAM_LCZ.TBL
+URBPARAM_LCZ.TBL
 ```
 
 This table contains urban parameters associated with different LCZ classes.
@@ -295,13 +295,7 @@ Users can modify these parameters depending on the objectives of their study, in
 The file is located in:
 
 ```
-WRF/run/URB_PARAM_LCZ.TBL
-```
-
-or copied from:
-
-```
-WRF/run/
+WRF/run/URBPARAM_LCZ.TBL
 ```
 
 ---
