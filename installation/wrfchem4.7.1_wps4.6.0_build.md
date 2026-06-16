@@ -1,6 +1,6 @@
 # Build WRF-Chem 4.7.1 + WPS 4.6.0
 
-This guide documents the compilation and installation of WRF-Chem 4.5 and WPS 4.5 using GNU compilers and MPI wrappers available on Linux/HPC systems.
+This guide documents the compilation and installation of WRF-Chem 4.7.1 and WPS 4.6.0 using GNU compilers and MPI wrappers available on Linux/HPC systems.
 
 ## Tested Configuration
 
