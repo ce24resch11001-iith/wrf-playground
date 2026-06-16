@@ -341,3 +341,148 @@ metgrid.exe
 ```
 
 If all executables are present, the installation was successful.
+
+## 11. WRF-Chem Not Enabled
+
+### Symptom
+
+WRF compiles successfully, but chemistry options are unavailable or chemistry-related files are not compiled.
+
+### Solution
+
+Verify:
+
+```bash
+echo $WRF_CHEM
+echo $WRF_KPP
+```
+
+Expected:
+
+```text
+1
+1
+```
+
+After running `./configure`, verify:
+
+```bash
+grep WRF_CHEM configure.wrf
+```
+
+Expected output should contain:
+
+```text
+WRF_CHEM = 1
+-DWRF_CHEM
+-DWRF_KPP
+```
+
+If chemistry support is missing, export the variables again and rerun:
+
+```bash
+./configure
+```
+
+---
+
+## 12. Flex Not Found During WRF-Chem Compilation
+
+### Error
+
+```bash
+flex: command not found
+```
+
+or
+
+```bash
+lex.yy.c generation failed
+```
+
+### Solution
+
+Verify:
+
+```bash
+which flex
+flex --version
+```
+
+If using a local Flex installation:
+
+```bash
+export FLEX=/path/to/flex
+export FLEX_LIB_DIR=/path/to/lib
+export PATH=/path/to/bin:$PATH
+```
+
+Reconfigure and recompile WRF-Chem after correcting the Flex path.
+
+---
+
+## 13. Dirty Source Tree After Failed Compilation
+
+### Symptom
+
+Compilation continues to fail even after fixing the original problem.
+
+### Cause
+
+Old object files and module files remain from a previous failed build.
+
+### Solution
+
+Clean the source tree completely:
+
+```bash
+./clean -a
+
+find . -name "*.o" -delete
+find . -name "*.mod" -delete
+```
+
+Then rerun:
+
+```bash
+./configure
+./compile em_real
+```
+
+A clean rebuild often resolves persistent compilation issues.
+
+---
+
+## 14. Mixed MPI Environments
+
+### Symptom
+
+Compilation succeeds, but linking fails or executables crash at runtime.
+
+### Cause
+
+Libraries were compiled using one MPI implementation while WRF was compiled using another.
+
+Examples:
+
+```text
+OpenMPI + Intel MPI
+MPICH + OpenMPI
+```
+
+### Solution
+
+Verify:
+
+```bash
+which mpicc
+which mpif90
+
+mpicc --version
+mpif90 --version
+```
+
+Ensure NetCDF, HDF5, WRF, and WPS were all built using the same MPI wrappers and compiler family.
+
+Avoid mixing MPI implementations within the same software stack.
+
