@@ -84,7 +84,6 @@ It represents:
 
 LCZ describes urban morphology using characteristics such as:
 
-- Building density
 - Building height
 - Surface cover
 - Urban structure
