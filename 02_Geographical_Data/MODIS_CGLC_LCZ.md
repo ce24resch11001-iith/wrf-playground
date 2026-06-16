@@ -318,11 +318,21 @@ LANDUSEF
 LU_INDEX
 ```
 
-Example:
+Visualize the land-use categories using **NCView**:
 
 ```bash
-ncdump -h geo_em.d01.nc | grep LANDUSE
+ncview geo_em.d01.nc
 ```
+
+Select:
+
+```
+LU_INDEX
+```
+
+to view the dominant land-use category distribution over the domain.
+
+`LANDUSEF` contains the fractional contribution of each land-use category, while `LU_INDEX` represents the dominant land-use category assigned to each grid cell.
 
 ---
 
@@ -347,4 +357,6 @@ Bulletin of the American Meteorological Society, 93(12), 1879–1900.
 
 # Notes
 
-CGLC-MODIS-LCZ provides improved urban surface representation for WRF simulations by combining detailed land-cover information with LCZ-based urban classification. This workflow is particularly useful for high-resolution urban simulations over cities.
+CGLC-MODIS-LCZ provides improved urban surface representation for WRF simulations by combining detailed land-cover information with LCZ-based urban classification.
+
+This workflow is particularly useful for high-resolution urban simulations over cities.
