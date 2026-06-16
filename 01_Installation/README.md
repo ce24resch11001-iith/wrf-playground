@@ -1,4 +1,4 @@
-# Installation and Compilation
+# 01_Installation and Compilation
 
 This section contains installation and compilation workflows for the Weather Research and Forecasting (WRF-ARW) modeling system, WRF-Chem, and supporting components.
 
