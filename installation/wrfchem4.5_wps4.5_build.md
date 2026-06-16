@@ -40,7 +40,7 @@ flex --version
 ## Workspace Setup
 
 ```bash
-export SCRATCH=/home/hwre1/ce24resch11001
+export SCRATCH=$(pwd)
 
 mkdir -p $SCRATCH/WRF_CHEM_BUILD/{Downloads,Libs}
 
