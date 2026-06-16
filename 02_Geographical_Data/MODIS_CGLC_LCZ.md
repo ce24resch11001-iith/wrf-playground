@@ -13,7 +13,6 @@ The dataset improves the representation of surface heterogeneity, particularly f
 
 - Urban climate
 - Urban heat islands
-- Air quality modelling
 - Urban canopy parameterization
 
 ---
@@ -319,7 +318,7 @@ use_wudapt_lcz = 1
 WRF uses:
 
 ```
-URB_PARAM_LCZ.TBL
+URBPARAM_LCZ.TBL
 ```
 
 for LCZ-based urban parameters.
@@ -333,7 +332,7 @@ use_wudapt_lcz = 0
 WRF uses the standard urban parameter table:
 
 ```
-URB_PARAM.TBL
+URBPARAM.TBL.ARW
 ```
 
 ---
@@ -406,7 +405,7 @@ LANDUSEF
 LU_INDEX
 ```
 
-Visualize the land-use categories using **NCView**:
+Visualize the land-use categories using **ncview**:
 
 ```bash
 ncview geo_em.d01.nc
@@ -461,4 +460,4 @@ WRF urban parameterization
 Urban atmosphere simulation
 ```
 
-This workflow is particularly useful for high-resolution urban simulations over cities where urban morphology strongly influences meteorological and air-quality processes.
+This workflow is particularly useful for high-resolution urban simulations over cities where urban morphology strongly influences meteorological processes.
