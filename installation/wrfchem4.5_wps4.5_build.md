@@ -282,8 +282,8 @@ cd ../..
 Choose:
 
 ```text
-GNU (gfortran/gcc), dmpar
-basic nesting
+34 = GNU (gfortran/gcc), dmpar
+1 = basic nesting (default)
 ```
 
 ## Compile
