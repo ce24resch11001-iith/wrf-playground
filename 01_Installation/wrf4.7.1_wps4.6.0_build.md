@@ -20,7 +20,7 @@ This guide documents the compilation and installation of WRF 4.7.1 and WPS 4.6.0
 ---
 
 ## Before Starting
-
+Check:
 ```bash
 module purge
 
