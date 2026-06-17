@@ -329,7 +329,7 @@ URBPARAM.TBL.ARW
 
 ---
 
-# Example WRF Configuration
+## Example WRF Configuration
 
 ```fortran
 &physics
@@ -350,7 +350,7 @@ allows the LCZ categories (51–61) from the CGLC-MODIS-LCZ dataset to interact 
 
 ---
 
-# Visualization Examples
+## Visualization Examples
 
 CGLC-MODIS-LCZ maps generated for Indian cities:
 
@@ -367,7 +367,7 @@ Example Images:
 ```
 ---
 
-# Verification
+## Verification
 
 After running:
 
@@ -406,7 +406,7 @@ to view the dominant land-use category distribution over the domain.
 
 ---
 
-# References
+## References
 
 1. Demuzere, M., He, C., Martilli, A., & Zonato, A. (2023).  
 Technical documentation for the hybrid 100-m global land cover dataset with Local Climate Zones for WRF (1.0.0). Zenodo.  
