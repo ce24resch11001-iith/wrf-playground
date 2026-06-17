@@ -45,8 +45,6 @@ The generated `geo_em.d0*.nc` files contain static information for every WRF gri
 ```markdown
 # Directory Contents
 
-```
-
 02_Geographical_Data/
 │
 ├── README.md
@@ -56,7 +54,6 @@ The generated `geo_em.d0*.nc` files contain static information for every WRF gri
 ├── common_errors.md
 └── geogrid_tbl_examples.md
 
-```
 ```
 ---
 
