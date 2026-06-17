@@ -1,4 +1,4 @@
-# MODIS CGLC-LCZ: Hybrid 100-m Global Land Cover Dataset with Local Climate Zones for WRF
+# CGLC MODIS LCZ: Hybrid 100-m Global Land Cover Dataset with Local Climate Zones for WRF
 
 ## Overview
 
