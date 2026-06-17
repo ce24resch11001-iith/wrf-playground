@@ -2,6 +2,8 @@
 
 *Practical WRF Workflows for Atmospheric and Climate Research*
 
+<sub>Created and maintained by UV Rohith</sub>
+
 A collection of practical, reproducible resources for working with the Weather Research and Forecasting (WRF) model in atmospheric and climate research.
 
 This repository serves as a hands-on reference for setting up, running, and analyzing WRF simulations based on real-world research practices developed across Linux and high-performance computing (HPC) environments.
