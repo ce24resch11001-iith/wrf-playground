@@ -209,7 +209,7 @@ urb_fraction_100m/
 
 ## GEOGRID.TBL Configuration
 
-Add the following entry to linked `GEOGRID.TBL` (see `GEOGRID.TBL.ARW_LCZ` for example):
+Add the following entry to linked `GEOGRID.TBL` (see `GEOGRID.TBL.ARW_LCZ` `(line 438)` for example):
 
 ```text
 name=FRC_URB2D
