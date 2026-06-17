@@ -17,7 +17,7 @@ Applications include:
 
 ---
 
-# Attribution
+## Attribution
 
 The original dataset was developed by:
 
@@ -35,7 +35,7 @@ This document describes the WRF/WPS implementation workflow and does not redistr
 
 ---
 
-# Dataset Information
+## Dataset Information
 
 | Parameter | Description                   |
 | --------- | ----------------------------- |
@@ -52,7 +52,7 @@ This document describes the WRF/WPS implementation workflow and does not redistr
 
 ---
 
-# Available Resolutions
+## Available Resolutions
 
 | Resolution | Approximate Scale |
 | ---------- | ----------------- |
@@ -65,7 +65,7 @@ This document describes the WRF/WPS implementation workflow and does not redistr
 
 ---
 
-# WRF/WPS Implementation
+## WRF/WPS Implementation
 
 The dataset is incorporated during:
 
@@ -94,7 +94,7 @@ The urban fraction values range from:
 
 ---
 
-# Prerequisites
+## Prerequisites
 
 The urban fraction datasets are distributed as `.tar.bz2` archives.
 
@@ -120,7 +120,7 @@ tar -xjvf urb_fraction_1km.tar.bz2
 ```
 ---
 
-# Dataset Download
+## Dataset Download
 
 Download the required dataset directly into:
 
@@ -207,7 +207,7 @@ urb_fraction_100m/
 
 ---
 
-# GEOGRID.TBL Configuration
+## GEOGRID.TBL Configuration
 
 Add the following entry to linked `GEOGRID.TBL` (see `GEOGRID.TBL.ARW_LCZ` for example):
 
@@ -240,7 +240,7 @@ rel_path=default:urb_fraction_100m/
 
 ---
 
-# Processing Workflow
+## Processing Workflow
 
 ```text
 Urban Fraction Dataset Download
@@ -258,7 +258,7 @@ Verify FRC_URB2D
 
 ---
 
-# Visualization Examples
+## Visualization Examples
 
 FRC_URB2D maps generated for Indian cities:
 
@@ -277,7 +277,7 @@ Example Images:
 
 ---
 
-# Verification
+## Verification
 
 After running:
 
@@ -321,7 +321,7 @@ Higher values indicate greater urban coverage within a grid cell.
 
 ---
 
-# References
+## References
 
 1. Patel, P., & Roth, M. (2022).
    *A High-Resolution Dataset of Global Urban Fraction for Mesoscale Urban Modelling*.
