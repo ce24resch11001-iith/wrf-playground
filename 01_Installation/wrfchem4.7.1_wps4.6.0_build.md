@@ -21,7 +21,7 @@ This guide documents the compilation and installation of WRF-Chem 4.7.1 and WPS 
 ---
 
 ## Before Starting
-
+Check:
 ```bash
 which gcc
 which gfortran
