@@ -6,7 +6,7 @@
 
 A collection of practical, reproducible resources for working with the Weather Research and Forecasting (WRF) model in atmospheric and climate research.
 
-This repository serves as a hands-on reference for setting up, running, and analyzing WRF simulations based on real-world research practices developed across Linux and high-performance computing (HPC) environments.
+This repository serves as a hands-on reference for setting up, running, and analyzing WRF simulations based on real-world research practices conducted on Linux and high-performance computing (HPC) environments.
 
 ---
 
