@@ -56,7 +56,7 @@ The generated `geo_em.d0*.nc` files contain static geographical information for 
 
 ## Documentation Files
 
-### `static_geographic_data.md`
+### `static_geographic_data.md` (mandatory)
 
 Documentation for downloading and installing WPS geographical datasets.
 
@@ -70,7 +70,7 @@ Topics covered:
 
 ---
 
-### `cglc_modis_lcz.md`
+### `cglc_modis_lcz.md` (optional)
 
 Documentation for integrating CGLC MODIS LCZ data into WRF.
 
@@ -89,7 +89,7 @@ Applications:
 
 ---
 
-### `frc_urb2d.md`
+### `frc_urb2d.md` (optional)
 
 Documentation for the `FRC_URB2D` (urban fraction) geographical variable.
 
