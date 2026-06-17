@@ -424,23 +424,3 @@ Local Climate Zones for Urban Temperature Studies.
 Bulletin of the American Meteorological Society, 93(12), 1879–1900.
 
 ---
-
-# Notes
-
-CGLC-MODIS-LCZ provides improved urban surface representation for WRF simulations by combining detailed land-cover information with LCZ-based urban classification.
-
-The complete workflow involves:
-
-```
-CGLC-MODIS-LCZ
-        ↓
-WPS geographical preprocessing
-        ↓
-LCZ-aware land-use generation
-        ↓
-WRF urban parameterization
-        ↓
-Urban atmosphere simulation
-```
-
-This workflow is particularly useful for high-resolution urban simulations over cities where urban morphology strongly influences meteorological processes.
