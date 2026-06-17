@@ -1,10 +1,10 @@
 # wrf-playground
 
-## WRF Workflows
+*Practical WRF Workflows for Atmospheric and Climate Research*
 
-A collection of practical, reproducible workflows for working with the Weather Research and Forecasting (WRF) model for atmospheric and climate research applications.
+A collection of practical, reproducible resources for working with the Weather Research and Forecasting (WRF) model in atmospheric and climate research.
 
-This repository serves as a hands-on reference for setting up, running, and analyzing WRF simulations based on real research workflows used in HPC and academic environments.
+This repository serves as a hands-on reference for setting up, running, and analyzing WRF simulations based on real-world research practices developed across Linux and high-performance computing (HPC) environments.
 
 ---
 
@@ -13,9 +13,7 @@ This repository serves as a hands-on reference for setting up, running, and anal
 **Uppucharla Venkata Rohith**  
 PhD Research Scholar  
 Department of Civil Engineering  
-Indian Institute of Technology Hyderabad, India  
-
-Research Area: Urban Climate, Aerosols, Precipitation, and WRF Modeling
+Indian Institute of Technology Hyderabad, India
 
 Academic Portfolio: https://sites.google.com/view/uvrohith
 
@@ -33,27 +31,27 @@ This work uses the Weather Research and Forecasting (WRF) model, remote sensing 
 
 ---
 
-## What this repository covers
+## What this Repository Covers
 
-This repository documents practical workflows for setting up, configuring, and running the Weather Research and Forecasting (WRF) modeling system in Linux and high-performance computing (HPC) environments. It covers the complete preprocessing chain, including atmospheric forcing data acquisition and preparation, WPS execution, domain configuration, geographical dataset management, and generation of meteorological inputs required for WRF simulations. The repository also includes guidance on software compilation, dependency management, troubleshooting installation issues, configuring nested domains, and handling common runtime problems encountered during operational and research-oriented WRF applications.
+This repository documents practical workflows for setting up, configuring, running, and analyzing simulations using the Weather Research and Forecasting (WRF) modeling system in Linux and high-performance computing (HPC) environments. The content is based on real research applications and operational workflows developed for atmospheric, climate, and urban environment studies.
 
-In addition to model execution, the repository provides examples and notes derived from real research workflows involving urban climate, aerosols, and precipitation studies. It includes workflows for experiment design, physics configuration testing, urban parameterization setups, post-processing of model outputs, data extraction, visualization, performance optimization on HPC systems, and reproducible research practices. The primary goal is not to provide official model documentation, but to share practical experiences, solutions, and workflow references that may help students, researchers, and new WRF users build, run, analyze, and troubleshoot their own simulations more efficiently.
+Topics covered include:
+
+* WRF and WPS installation, compilation, across Linux/HPC Environments
+* Atmospheric forcing data preparation using datasets such as ERA5 and FNL
+* Domain configuration, nesting strategies, and WPS preprocessing workflows
+* Integration of geographical datasets, including CGLC-MODIS-LCZ and global urban fraction products
+* WRF simulation setup, execution, monitoring, and troubleshooting
+* Urban climate experiments and parameterization studies
+* Post-processing, visualization, and analysis of WRF outputs
+
+In addition to model execution, the repository includes examples and notes derived from ongoing research involving urban climate, aerosols, and precipitation processes. The primary goal is not to provide official model documentation, but to share practical experience, solutions, and reproducible workflows that may help researchers, students, and new WRF users build, run, analyze, and troubleshoot simulations more efficiently.
 
 ---
 
 ## Purpose
 
-This repository aims to document practical WRF workflows, support reproducible atmospheric modeling research, and provide structured references for common challenges encountered during model setup, preprocessing, simulation, and analysis. It is intended as a learning resource and knowledge base developed from real-world research and HPC experience.
-
----
-
-## Who this Repository is For
-
-This repository may be useful for:
-
-* Students and researchers working with WRF and regional climate models
-* Users running WRF in Linux or HPC environments
-* Researchers interested in urban climate, land-use, and atmospheric modeling studies
+This repository aims to document practical WRF workflows, promote reproducible atmospheric modeling research, and provide structured references for common challenges encountered during model setup, preprocessing, simulation, and analysis.
 
 ---
 
@@ -73,7 +71,6 @@ Future additions may include:
 * Advanced urban climate simulations
 * Urban canopy parameterization experiments
 * Case studies over Indian cities
-* HPC performance optimization strategies
 * Post-processing and visualization examples
 * Research reproducibility and workflow management
 
@@ -89,6 +86,4 @@ If you find an issue, have a recommendation, or would like to contribute to the 
 
 ## Contact
 
-For additional information, research activities, and project updates:
-
-https://sites.google.com/view/uvrohith
+Academic Portfolio: https://sites.google.com/view/uvrohith
