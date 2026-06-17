@@ -240,4 +240,4 @@ Proceed to ungrib.exe
 
 * MODIS CGLC-LCZ Technical Documentation : Matthias Demuzere, Cenlin He, Alberto Martilli, & Andrea Zonato. (2023). Technical documentation for the hybrid 100-m global land cover dataset with Local Climate Zones for WRF (1.0.0). Zenodo. https://doi.org/10.5281/zenodo.7670792
 
-* A High-Resolution Dataset of Global Urban Fraction for Mesoscale Urban Modelling : Patel, P., & Roth, M. (2022). A High-Resolution Dataset of Global Urban Fraction for Mesoscale Urban Modelling (2.0.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7298393
+* Global Urban Fraction Dataset : Patel, P., & Roth, M. (2022). A High-Resolution Dataset of Global Urban Fraction for Mesoscale Urban Modelling (2.0.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7298393
