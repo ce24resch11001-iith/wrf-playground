@@ -24,22 +24,16 @@ Geographical datasets are processed during the first stage of the WRF preprocess
 
 ```
 Geographical Data
-        |
         ↓
     geogrid.exe
-        |
         ↓
   geo_em.d0*.nc
-        |
         ↓
     ungrib.exe
-        |
         ↓
     metgrid.exe
-        |
         ↓
      real.exe
-        |
         ↓
      wrf.exe
 ```
