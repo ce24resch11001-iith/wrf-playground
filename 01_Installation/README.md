@@ -18,21 +18,33 @@ This section contains installation and compilation workflows for the Weather Res
 
 3. **Runtime Environment Setup**
 
-   Before running WRF, WRF-Chem, or WPS on an HPC system, source:
+   Before running WRF, WRF-Chem, or WPS, source:
 
    * File: `wrf_env.sh`
 
-   This file restores required environment variables and library paths (NetCDF, HDF5, Jasper, etc.) for the current HPC session.
+   This file restores required environment variables and library paths (NetCDF, HDF5, Jasper, etc.) for the current session.
 
-   Since environment variables are session-specific, source this file after every new HPC login:
+   On HPC systems, source this file after every new login session:
 
    ```bash
    source wrf_env.sh
+   ````
+   For local Linux installations, add the following line to `~/.bashrc` to load the environment automatically:
+
+   ```bash
+   source /path/to/wrf_env.sh
+   ```
+
+   Reload the shell after updating `.bashrc`:
+
+   ```bash
+   source ~/.bashrc
+   ```
 
 ## Notes
 
-* Always verify compiler, MPI, and library compatibility before compilation.
+* Verify compiler, MPI, and library compatibility before compilation.
 * Follow the guides in the order presented.
-* Build and validate all prerequisite libraries before compiling WRF or WRF-Chem.
-* For WRF-Chem installations, ensure that chemistry and KPP support are enabled during configuration.
-* Refer to troubleshooting documentation for common installation issues (`common_errors.md`).
+* Build and validate prerequisite libraries before compiling WRF or WRF-Chem.
+* Ensure chemistry and KPP support are enabled when building WRF-Chem.
+* Refer to `common_errors.md` for troubleshooting.
