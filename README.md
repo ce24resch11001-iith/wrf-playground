@@ -1,18 +1,20 @@
 # wrf-playground
 
-# WRF Workflows
+## WRF Workflows
 
 A collection of practical, reproducible workflows for working with the Weather Research and Forecasting (WRF) model for atmospheric and climate research applications.
 
 This repository serves as a hands-on reference for setting up, running, and analyzing WRF simulations based on real research workflows used in HPC and academic environments.
 
----
 
 ## Author
 
 **Uppucharla Venkata Rohith**  
-PhD Research Scholar, Hydraulics and Water Resources Engineering (HWRE)  
-Department of Civil Engineering, Indian Institute of Technology Hyderabad, India
+PhD Research Scholar  
+Department of Civil Engineering  
+Indian Institute of Technology Hyderabad, India  
+
+Research Area: Urban Climate, Aerosols, Precipitation, and WRF Modeling
 
 Academic Portfolio: https://sites.google.com/view/uvrohith
 
