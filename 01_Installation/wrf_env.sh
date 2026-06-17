@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DIR=/home/hwre1/ce24resch11001/WRF_BUILD
+export DIR= PATH_TO/WRF_BUILD
 
 export NETCDF=$DIR/Libs
 export HDF5=$DIR/Libs
