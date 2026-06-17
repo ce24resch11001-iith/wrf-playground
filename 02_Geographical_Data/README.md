@@ -42,34 +42,48 @@ The generated `geo_em.d0*.nc` files contain static information for every WRF gri
 
 ---
 
+```markdown
 # Directory Contents
 
 ```
+
 02_Geographical_Data/
 │
 ├── README.md
-├── static_geographic.md
+├── static_geographic_data.md
 ├── modis_cglc_lcz.md
 ├── frc_urb2d.md
 ├── common_errors.md
 └── geogrid_tbl_examples.md
-```
 
+```
+```
 ---
 
 # Documentation Files
 
-## 1. modis_cglc_lcz.md
+## 1. `static_geographic_data.md`
 
-Documentation for integrating **MODIS Land Cover and Local Climate Zone (LCZ)** datasets into WRF.
+Documentation for downloading and installing WPS geographical static datasets.
 
 Topics covered:
 
-- Overview of MODIS LCZ datasets
-- Importance of LCZ classification for urban modelling
-- Downloading and installing LCZ data
-- Placement inside the WPS geographical database
-- Required directory structure
+- WPS geographical data overview
+- Mandatory static dataset downloads
+- Dataset installation and directory structure
+- Configuring `geog_data_path` in `namelist.wps`
+- Verification of geographical data installation
+
+---
+
+## 2. `modis_cglc_lcz.md`
+
+Documentation for integrating **MODIS CGLC-LCZ (Local Climate Zone)** data into WRF.
+
+Topics covered:
+
+- LCZ dataset overview
+- Installation and directory placement
 - `GEOGRID.TBL` configuration
 - Running `geogrid.exe` with LCZ data
 
@@ -77,52 +91,55 @@ Applications:
 
 - Urban climate simulations
 - Urban heat island studies
-- City-scale meteorological modelling
-- Urban canopy parameterization studies
+- Urban canopy modelling
 
 ---
 
-## 2. frc_urb2d.md
+## 3. `frc_urb2d.md`
 
 Documentation for the **FRC_URB2D (Urban Fraction)** geographical variable.
-
-FRC_URB2D represents the fraction of urban area within each model grid cell and is an important input for urban parameterization schemes.
 
 Topics covered:
 
 - Purpose of urban fraction data
-- Relationship with urban canopy models
-- Integration with WRF urban physics schemes
+- Integration with WRF urban parameterization schemes
 - Data preparation requirements
-- Validation and visualization methods
+- Validation and visualization
 
 Applications:
 
-- Urban Weather Research
-- Urban Heat Island simulations
-- High-resolution WRF modelling
+- Urban meteorological simulations
 - Urban land-surface representation
+- High-resolution WRF modelling
 
 ---
 
----
+## 4. `geogrid_tbl_examples.md`
 
-## 3. geogrid_tbl_examples.md
-
-Documentation and examples for modifying the WPS `GEOGRID.TBL` file.
-
-The `GEOGRID.TBL` controls how geographical datasets are read and processed by `geogrid.exe`.
+Documentation and examples for modifying the WPS `GEOGRID.TBL` configuration.
 
 Topics covered:
 
-- Structure of `GEOGRID.TBL`
-- Field definitions
-- Dataset priority
+- `GEOGRID.TBL` structure
+- Geographical variable definitions
+- Dataset priority and selection
 - Interpolation methods
-- Multiple dataset handling
-- Custom geographical variable configuration
+- Custom geographical field configuration
 
 ---
+
+## 5. `common_errors.md`
+
+Documentation for common issues related to WPS geographical data.
+
+Topics covered:
+
+- Missing geographical fields
+- Incorrect `geog_data_path`
+- `GEOGRID.TBL` configuration errors
+- `geogrid.exe` failures
+```
+
 
 # WPS Geographical Data Structure
 
