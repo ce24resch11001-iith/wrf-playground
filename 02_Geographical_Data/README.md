@@ -48,7 +48,7 @@ The generated `geo_em.d0*.nc` files contain static information for every WRF gri
 02_Geographical_Data/
 │
 ├── README.md
-├── modis_lcz.md
+├── modis_cglc_lcz.md
 ├── frc_urb2d.md
 ├── custom_geodata.md
 └── geogrid_tbl_examples.md
