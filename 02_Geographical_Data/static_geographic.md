@@ -1,4 +1,3 @@
-````markdown
 # WPS Geographical Static Data Setup
 
 This section describes the download and installation of geographical static data required by `geogrid.exe` during the WRF preprocessing stage.
