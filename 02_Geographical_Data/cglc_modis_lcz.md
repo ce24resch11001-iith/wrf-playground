@@ -33,7 +33,7 @@ Technical documentation:
 https://doi.org/10.5281/zenodo.7670792
 ```
 
-This document describes the WRF/WPS implementation workflow and does not redistribute or modify the original dataset.
+> **Note:** This document describes the WRF/WPS implementation workflow and does not redistribute or modify the original dataset.
 
 ---
 
