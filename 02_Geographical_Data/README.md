@@ -48,6 +48,7 @@ The generated `geo_em.d0*.nc` files contain static information for every WRF gri
 02_Geographical_Data/
 │
 ├── README.md
+├── static_geographic.md
 ├── modis_cglc_lcz.md
 ├── frc_urb2d.md
 ├── common_errors.md
