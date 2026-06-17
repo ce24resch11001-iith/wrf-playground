@@ -70,7 +70,7 @@ ulimit -s unlimited
 ```
 
 
-# Build FLEX
+## Build FLEX
 ```bash
 
 cd $WRFCHEM_HOME/Downloads
@@ -91,7 +91,7 @@ export FLEX_LIB_DIR=$DIR/lib
 ```
 ---
 
-# Build ZLIB
+## Build ZLIB
 
 ```bash
 cd $WRFCHEM_HOME/Downloads
@@ -110,7 +110,7 @@ make install
 
 ---
 
-# Build HDF5
+## Build HDF5
 
 ```bash
 cd $WRFCHEM_HOME/Downloads
@@ -136,7 +136,7 @@ export HDF5=$DIR
 
 ---
 
-# Build NetCDF-C
+## Build NetCDF-C
 
 ```bash
 cd $WRFCHEM_HOME/Downloads
@@ -161,7 +161,7 @@ make install
 
 ---
 
-# Build NetCDF-Fortran
+## Build NetCDF-Fortran
 
 ```bash
 cd $WRFCHEM_HOME/Downloads
@@ -186,7 +186,7 @@ export NETCDF=$DIR
 
 ---
 
-# Build Jasper
+## Build Jasper
 
 ```bash
 cd $WRFCHEM_HOME/Downloads
@@ -208,7 +208,7 @@ make install
 
 ---
 
-# Build LibPNG
+## Build LibPNG
 
 ```bash
 cd $WRFCHEM_HOME/Downloads
@@ -412,7 +412,7 @@ ls $WRFCHEM_HOME/WPS-4.6.0/*.exe
 
 You are finished when all of the following exist.
 
-## WRF-Chem
+# WRF-Chem
 
 ```text
 real.exe
@@ -421,7 +421,7 @@ ndown.exe
 tc.exe
 ```
 
-## WPS
+# WPS
 
 ```text
 geogrid.exe
