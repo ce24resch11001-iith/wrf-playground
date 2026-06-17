@@ -17,7 +17,7 @@ The dataset improves the representation of surface heterogeneity, particularly f
 
 ---
 
-# Attribution
+## Attribution
 
 The original dataset was developed by:
 
@@ -41,7 +41,7 @@ This document describes the WRF/WPS implementation workflow and does not redistr
 
 ---
 
-# Dataset Information
+## Dataset Information
 
 | Parameter | Description |
 |-----------|-------------|
@@ -60,7 +60,7 @@ This document describes the WRF/WPS implementation workflow and does not redistr
 
 ---
 
-# Dataset Components
+## Dataset Components
 
 ## 1. CGLC-MODIS Land Cover
 
@@ -92,7 +92,7 @@ LCZ categories allow WRF to represent different urban environments instead of a 
 
 ---
 
-# CGLC-MODIS-LCZ Land Categories in WRF
+## CGLC-MODIS-LCZ Land Categories in WRF
 
 The WRF implementation uses:
 
@@ -106,7 +106,7 @@ The LCZ numbering avoids conflicts with existing WRF land-use categories.
 
 ---
 
-# MODIS IGBP Land Cover Categories
+## MODIS IGBP Land Cover Categories
 
 | ID | Class |
 |----|-------|
@@ -134,7 +134,7 @@ The LCZ numbering avoids conflicts with existing WRF land-use categories.
 
 ---
 
-# LCZ Categories in WRF
+## LCZ Categories in WRF
 
 | WRF ID | LCZ | Description |
 |--------|-----|-------------|
@@ -152,7 +152,7 @@ The LCZ numbering avoids conflicts with existing WRF land-use categories.
 
 ---
 
-# WRF/WPS Implementation
+## WRF/WPS Implementation
 
 Supported from:
 
@@ -174,7 +174,7 @@ geogrid.exe
 
 ---
 
-# Dataset Download
+## Dataset Download
 
 Source:
 
@@ -192,7 +192,7 @@ WPS_GEOG/
 
 ---
 
-# GEOGRID.TBL Configuration
+## GEOGRID.TBL Configuration
 
 File:
 
@@ -233,7 +233,7 @@ name=LANDUSEF
 
 ---
 
-# namelist.wps Configuration
+## namelist.wps Configuration
 
 Activate CGLC-MODIS-LCZ using:
 
@@ -247,7 +247,7 @@ The `+default` option allows WPS to use default geographical datasets where CGLC
 
 ---
 
-# Processing Workflow
+## Processing Workflow
 
 ```
 CGLC-MODIS-LCZ Download
@@ -271,7 +271,7 @@ Run real.exe and wrf.exe
 
 ---
 
-# WRF Urban Parameterization: URBPARAM_LCZ.TBL
+## WRF Urban Parameterization: URBPARAM_LCZ.TBL
 
 For LCZ-based urban simulations, WRF uses:
 
@@ -291,7 +291,7 @@ WRF/run/URBPARAM_LCZ.TBL
 
 ---
 
-# Activating LCZ Urban Parameters
+## Activating LCZ Urban Parameters
 
 The LCZ urban parameter table is activated through the WRF namelist:
 
@@ -318,7 +318,7 @@ for LCZ-based urban parameters.
 When:
 
 ```
-use_wudapt_lcz = 0
+use_wudapt_lcz = 0 (default, if not activated)
 ```
 
 WRF uses the standard urban parameter table:
