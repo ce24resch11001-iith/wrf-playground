@@ -78,7 +78,7 @@ Topics covered:
 
 * LCZ dataset overview
 * Installation and directory placement
-* `GEOGRID.TBL` configuration
+* `GEOGRID.TBL.ARW_LCZ` configuration
 * Running `geogrid.exe` with LCZ data
 
 Applications:
@@ -95,10 +95,10 @@ Documentation for the `FRC_URB2D` (urban fraction) geographical variable.
 
 Topics covered:
 
-* Urban fraction datasets
+* Global Urban fraction datasets
 * Integration with urban parameterization schemes
 * Data preparation
-* Validation and visualization
+* Visualization
 
 Applications:
 
@@ -172,7 +172,7 @@ The geographical data location is specified in `namelist.wps`:
 
 ---
 
-## Resolution Considerations
+## Resolution Considerations (Example)
 
 | WRF Resolution | Recommended Dataset Type                    |
 | -------------- | ------------------------------------------- |
@@ -186,7 +186,7 @@ For urban simulations, higher-resolution geographical datasets are generally pre
 
 ## Dataset Priority
 
-When multiple datasets provide the same geographical variable, dataset selection is controlled through `GEOGRID.TBL`.
+When multiple datasets provide the same geographical variable, dataset selection is controlled through linked `GEOGRID.TBL`.
 
 Example:
 
@@ -232,14 +232,12 @@ Proceed to ungrib.exe
 
 ## References
 
-* WRF Users Guide
-  https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/index.html
+* WRF Users Guide : https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/index.html
 
-* WPS Geographical Data Downloads
-  https://www2.mmm.ucar.edu/wrf/users/download/get_sources_wps_geog.html
+* WPS Geographical Data Downloads : https://www2.mmm.ucar.edu/wrf/users/download/get_sources_wps_geog.html
 
-* WRF Online Tutorial
-  https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php
+* WRF Online Tutorial : https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php
 
-* MODIS CGLC-LCZ Technical Documentation
-  https://doi.org/10.5281/zenodo.7670792
+* MODIS CGLC-LCZ Technical Documentation : Matthias Demuzere, Cenlin He, Alberto Martilli, & Andrea Zonato. (2023). Technical documentation for the hybrid 100-m global land cover dataset with Local Climate Zones for WRF (1.0.0). Zenodo. https://doi.org/10.5281/zenodo.7670792
+
+* A High-Resolution Dataset of Global Urban Fraction for Mesoscale Urban Modelling : Patel, P., & Roth, M. (2022). A High-Resolution Dataset of Global Urban Fraction for Mesoscale Urban Modelling (2.0.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7298393
