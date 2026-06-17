@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DIR= PATH_TO/WRF_BUILD
+export DIR= path/to/WRF_BUILD
 
 export NETCDF=$DIR/Libs
 export HDF5=$DIR/Libs
