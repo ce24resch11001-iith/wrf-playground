@@ -94,6 +94,32 @@ The urban fraction values range from:
 
 ---
 
+# Prerequisites
+
+The urban fraction datasets are distributed as `.tar.bz2` archives.
+
+Ensure that a bzip2 extractor is available on your system before downloading and extracting the files.
+
+Ubuntu/Debian:
+
+```bash
+sudo apt update
+sudo apt install -y bzip2
+```
+
+Verify installation:
+
+```bash
+which bzip2
+```
+
+Example extraction command (after downloading a dataset):
+
+```bash
+tar -xjvf urb_fraction_1km.tar.bz2
+```
+---
+
 # Dataset Download
 
 Download the required dataset directly into:
@@ -110,7 +136,7 @@ cd WPS_GEOG
 wget -O urb_fraction_1d.tar.bz2 \
 "https://zenodo.org/records/7298393/files/urb_fraction_1d.tar.bz2?download=1"
 
-tar -xvf urb_fraction_1d.tar.bz2
+tar -xjvf urb_fraction_1d.tar.bz2
 ```
 
 ## 0.5° Resolution
@@ -121,7 +147,7 @@ cd WPS_GEOG
 wget -O urb_fraction_0p50d.tar.bz2 \
 "https://zenodo.org/records/7298393/files/urb_fraction_0p50d.tar.bz2?download=1"
 
-tar -xvf urb_fraction_0p50d.tar.bz2
+tar -xjvf urb_fraction_0p50d.tar.bz2
 ```
 
 ## 0.25° Resolution
@@ -132,7 +158,7 @@ cd WPS_GEOG
 wget -O urb_fraction_0p25d.tar.bz2 \
 "https://zenodo.org/records/7298393/files/urb_fraction_0p25d.tar.bz2?download=1"
 
-tar -xvf urb_fraction_0p25d.tar.bz2
+tar -xjvf urb_fraction_0p25d.tar.bz2
 ```
 
 ## 1 km Resolution
@@ -143,7 +169,7 @@ cd WPS_GEOG
 wget -O urb_fraction_1km.tar.bz2 \
 "https://zenodo.org/records/7298393/files/urb_fraction_1km.tar.bz2?download=1"
 
-tar -xvf urb_fraction_1km.tar.bz2
+tar -xjvf urb_fraction_1km.tar.bz2
 ```
 
 ## 300 m Resolution
@@ -154,7 +180,7 @@ cd WPS_GEOG
 wget -O urb_fraction_300m.tar.bz2 \
 "https://zenodo.org/records/7298393/files/urb_fraction_300m.tar.bz2?download=1"
 
-tar -xvf urb_fraction_300m.tar.bz2
+tar -xjvf urb_fraction_300m.tar.bz2
 ```
 
 ## 100 m Resolution
@@ -165,7 +191,7 @@ cd WPS_GEOG
 wget -O urb_fraction_100m.tar.bz2 \
 "https://zenodo.org/records/7298393/files/urb_fraction_100m.tar.bz2?download=1"
 
-tar -xvf urb_fraction_100m.tar.bz2
+tar -xjvf urb_fraction_100m.tar.bz2
 ```
 
 Extracted directories:
@@ -183,7 +209,7 @@ urb_fraction_100m/
 
 # GEOGRID.TBL Configuration
 
-Add the following entry to lined `GEOGRID.TBL`:
+Add the following entry to linked `GEOGRID.TBL` (see `GEOGRID.TBL.ARW_LCZ` for example):
 
 ```text
 name=FRC_URB2D
