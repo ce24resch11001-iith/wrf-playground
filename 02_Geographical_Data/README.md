@@ -50,6 +50,7 @@ The generated `geo_em.d0*.nc` files contain static information for every WRF gri
 ├── README.md
 ├── modis_cglc_lcz.md
 ├── frc_urb2d.md
+├── common_errors.md
 └── geogrid_tbl_examples.md
 ```
 
@@ -139,9 +140,7 @@ WPS_GEOG/
 │
 ├── modis_cglc_lcz/
 │
-├── frc_urb2d/
-│
-└── custom_dataset/
+└── frc_urb2d/
 ```
 
 The location of geographical datasets is specified in:
