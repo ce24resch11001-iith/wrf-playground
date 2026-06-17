@@ -10,10 +10,8 @@ FRC_URB2D is commonly used by urban canopy parameterization schemes to improve t
 
 Applications include:
 
-* Urban meteorology
-* Urban heat island studies
-* Urban climate modelling
-* High-resolution WRF simulations
+- Urban and mesoscale atmospheric modelling
+- High-resolution WRF simulations
 
 ---
 
