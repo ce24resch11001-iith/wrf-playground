@@ -251,11 +251,10 @@ Proceed to ungrib
 
 # References
 
-- WRF Users Guide
-- WPS Geographical Data Documentation
-- NCAR Mesoscale and Microscale Meteorology Laboratory Documentation
-- MODIS Land Cover Documentation
-- Local Climate Zone (LCZ) Classification Framework
+- WRF Users Guide - https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/index.html
+- WPS Static Geographical Data Page - https://www2.mmm.ucar.edu/wrf/users/download/get_sources_wps_geog.html
+- UCAR Mesoscale and Microscale Meteorology Laboratory Documentation - https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php
+- MODIS CGLC Local Climate Zone (LCZ) Technical Documentation - Matthias Demuzere, Cenlin He, Alberto Martilli, & Andrea Zonato. (2023). Technical documentation for the hybrid 100-m global land cover dataset with Local Climate Zones for WRF (1.0.0). Zenodo. https://doi.org/10.5281/zenodo.7670792
 
 ---
 
