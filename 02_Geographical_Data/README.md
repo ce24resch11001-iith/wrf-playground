@@ -46,7 +46,7 @@ The generated `geo_em.d0*.nc` files contain static geographical information for 
 │
 ├── README.md
 ├── static_geographic_data.md
-├── modis_cglc_lcz.md
+├── cglc_modis_lcz.md
 ├── frc_urb2d.md
 ├── common_errors.md
 └── geogrid_tbl_examples.md
@@ -70,9 +70,9 @@ Topics covered:
 
 ---
 
-### `modis_cglc_lcz.md`
+### `cglc_modis_lcz.md`
 
-Documentation for integrating MODIS CGLC-LCZ data into WRF.
+Documentation for integrating CGLC MODIS LCZ data into WRF.
 
 Topics covered:
 
