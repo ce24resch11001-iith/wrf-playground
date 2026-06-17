@@ -8,6 +8,7 @@ A collection of practical, reproducible resources for working with the Weather R
 
 This repository serves as a hands-on reference for setting up, running, and analyzing WRF simulations based on real-world research practices conducted on Linux and high-performance computing (HPC) environments.
 
+> **Status:** This repository is under active development. Documentation, workflows, datasets, and examples will be added and updated regularly alongside ongoing research activities.
 ---
 
 ## Author
