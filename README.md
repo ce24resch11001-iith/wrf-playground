@@ -41,7 +41,7 @@ In addition to model execution, the repository provides examples and notes deriv
 
 ---
 
-## Purpose of this Repository
+## Purpose
 
 This repository aims to document practical WRF workflows, support reproducible atmospheric modeling research, and provide structured references for common challenges encountered during model setup, preprocessing, simulation, and analysis. It is intended as a learning resource and knowledge base developed from real-world research and HPC experience.
 
@@ -51,11 +51,9 @@ This repository aims to document practical WRF workflows, support reproducible a
 
 This repository may be useful for:
 
-* Atmospheric and climate science researchers
-* Students working with WRF and regional climate models
-* HPC users running numerical weather simulations
-* Researchers conducting urban climate studies
-* Beginners seeking practical guidance for WRF workflows
+* Students and researchers working with WRF and regional climate models
+* Users running WRF in Linux or HPC environments
+* Researchers interested in urban climate, land-use, and atmospheric modeling studies
 
 ---
 
@@ -76,7 +74,6 @@ Future additions may include:
 * Urban canopy parameterization experiments
 * Case studies over Indian cities
 * HPC performance optimization strategies
-* Automated preprocessing workflows
 * Post-processing and visualization examples
 * Research reproducibility and workflow management
 
