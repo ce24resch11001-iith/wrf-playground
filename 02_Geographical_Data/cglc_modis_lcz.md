@@ -9,11 +9,7 @@ It combines:
 1. **Copernicus Global Land Service Land Cover (CGLC)** converted to MODIS IGBP land-use classes.
 2. **Local Climate Zone (LCZ)** classification representing urban morphology.
 
-The dataset improves the representation of surface heterogeneity, particularly for urban simulations involving:
-
-- Urban climate
-- Urban heat islands
-- Urban canopy parameterization
+The dataset provides improved representation of both natural land-cover classes and urban morphology compared to conventional WRF land-use datasets.
 
 ---
 
