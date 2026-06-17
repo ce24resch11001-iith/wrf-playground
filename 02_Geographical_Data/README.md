@@ -200,14 +200,10 @@ Higher-resolution and more detailed datasets should generally have higher priori
 Example:
 
 ```
-MODIS LCZ
-      >
-MODIS Land Cover
-      >
-USGS Land Use
+MODIS LCZ > MODIS Land Cover > USGS Land Use
 ```
 
-The priority determines which dataset is used when generating the final `geo_em.d0*.nc` files.
+The priority determines which dataset is used when generating the final `geo_em.d0*.nc` files (based on its availabilty).
 
 ---
 
@@ -217,7 +213,7 @@ Before running WRF, verify that:
 
 - Geographical datasets are correctly installed
 - `geog_data_path` points to the correct directory
-- Required entries exist in `GEOGRID.TBL`
+- Required entries exist in linked `GEOGRID.TBL`
 - `geogrid.exe` completes without errors
 - Output files contain expected variables
 
