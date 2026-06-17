@@ -220,7 +220,7 @@ Expected output:
 GEOGRID.TBL -> GEOGRID.TBL.ARW_LCZ
 ```
 
-Dataset entry (see GEOGRID.TBL.ARW_LCZ for example)::
+Dataset entry (see `GEOGRID.TBL.ARW_LCZ` for example)::
 
 ```text
 name=LANDUSEF
