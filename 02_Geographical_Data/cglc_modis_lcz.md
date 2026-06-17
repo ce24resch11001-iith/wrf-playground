@@ -366,22 +366,13 @@ CGLC-MODIS-LCZ maps generated for Indian cities:
 Resolution: 1 km
 ```
 
-Examples:
-
-- Hyderabad
-- Delhi
-- Mumbai
-- Kolkata
-
-Images:
-
+Example Images:
 ```
-images/hyderabad_modis_cglc_lcz_1km.png
-images/delhi_modis_cglc_lcz_1km.png
-images/mumbai_modis_cglc_lcz_1km.png
-images/kolkata_modis_cglc_lcz_1km.png
+- Hyderabad : images/hyderabad_cglc_modis_lcz_1km.png
+- Delhi : images/delhi_cglc_modis_lcz_1km.png
+- Mumbai : images/mumbai_cglc_modis_lcz_1km.png
+- Kolkata : images/kolkata_cglc_modis_lcz_1km.png
 ```
-
 ---
 
 # Verification
