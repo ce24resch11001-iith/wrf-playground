@@ -74,7 +74,7 @@ ulimit -s unlimited
 
 ---
 
-# Build ZLIB
+## Build ZLIB
 
 ```bash
 cd $WRF_HOME/Downloads
@@ -93,7 +93,7 @@ make install
 
 ---
 
-# Build HDF5
+## Build HDF5
 
 ```bash
 cd $WRF_HOME/Downloads
@@ -116,7 +116,7 @@ make install
 
 ---
 
-# Build NetCDF-C
+## Build NetCDF-C
 
 ```bash
 cd $WRF_HOME/Downloads
@@ -140,7 +140,7 @@ make install
 
 ---
 
-# Build NetCDF-Fortran
+## Build NetCDF-Fortran
 
 ```bash
 cd $WRF_HOME/Downloads
@@ -162,7 +162,7 @@ make install
 
 ---
 
-# Build Jasper
+## Build Jasper
 
 ```bash
 cd $WRF_HOME/Downloads
@@ -183,7 +183,7 @@ make install
 
 ---
 
-# Build LibPNG
+## Build LibPNG
 
 ```bash
 cd $WRF_HOME/Downloads
@@ -333,7 +333,7 @@ metgrid.exe
 
 ---
 
-# Final Verification
+## Final Verification
 
 ```bash
 nc-config --all
