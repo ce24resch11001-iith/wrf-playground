@@ -65,17 +65,6 @@ This document describes the WRF/WPS implementation workflow and does not redistr
 
 ---
 
-# Recommended Resolution Selection
-
-| WRF Grid Size | Recommended Dataset |
-| ------------- | ------------------- |
-| > 25 km       | 0.25°               |
-| 5–25 km       | 1 km                |
-| 1–5 km        | 300 m               |
-| < 1 km        | 100 m               |
-
----
-
 # WRF/WPS Implementation
 
 The dataset is incorporated during:
