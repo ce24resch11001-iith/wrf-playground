@@ -251,28 +251,20 @@ The `+default` option allows WPS to use default geographical datasets where CGLC
 
 ```
 CGLC-MODIS-LCZ Download
-          |
           ↓
 Extract into WPS_GEOG
-          |
           ↓
-Configure GEOGRID.TBL
-          |
+Configure GEOGRID.TBL -> GEOGRID.TBL.ARW_LCZ
           ↓
 Update namelist.wps
-          |
           ↓
 Run geogrid.exe
-          |
           ↓
 Generate geo_em.d0*.nc
-          |
           ↓
 Check LANDUSEF / LU_INDEX
-          |
           ↓
 Configure WRF LCZ urban parameters
-          |
           ↓
 Run real.exe and wrf.exe
 ```
