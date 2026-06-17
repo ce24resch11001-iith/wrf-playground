@@ -235,21 +235,16 @@ ncl util/plotgrids_new.ncl
 
 ```
 Download geographical dataset
-            |
             ↓
 Install into WPS_GEOG
-            |
             ↓
 Modify GEOGRID.TBL if required
-            |
             ↓
 Run geogrid.exe
-            |
             ↓
 Check geo_em.d0*.nc output
-            |
             ↓
-Proceed to atmospheric preprocessing
+Proceed to ungrib
 ```
 
 ---
