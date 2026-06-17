@@ -58,7 +58,7 @@ The generated `geo_em.d0*.nc` files contain static information for every WRF gri
 
 # Documentation Files
 
-## 1. modis_lcz.md
+## 1. modis_cglc_lcz.md
 
 Documentation for integrating **MODIS Land Cover and Local Climate Zone (LCZ)** datasets into WRF.
 
