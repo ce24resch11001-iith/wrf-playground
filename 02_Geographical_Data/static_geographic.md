@@ -75,11 +75,9 @@ Check that the geographical fields are available:
 
 ```bash
 ls /path/to/WPS_GEOG
-```
 
-Expected directories include:
+The directory should contain mandatory fields such as:
 
-```
 albedo_modis/
 greenfrac_fpar_modis/
 lai_modis_10m/
@@ -87,6 +85,13 @@ modis_landuse_20class_30s_with_lakes/
 soiltype_bot_30s/
 soiltype_top_30s/
 topo_gmted2010_30s/
+varsso/
+```
+Additional datasets for specific applications can also be placed inside the same WPS_GEOG directory, for example:
+
+```text
+CGLC_MODIS_LCZ_global/
+urbfrac_1km/
 ```
 
 The WPS geographical data is now ready for running:
@@ -102,6 +107,3 @@ The WPS geographical data is now ready for running:
 * The high-resolution mandatory dataset is recommended for research simulations.
 * Additional application-specific static datasets can be added to the same `geog_data_path`.
 * Keep the extracted geographical data directory unchanged after installation.
-
-```
-```
