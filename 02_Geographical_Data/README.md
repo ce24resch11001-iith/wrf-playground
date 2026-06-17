@@ -50,7 +50,6 @@ The generated `geo_em.d0*.nc` files contain static information for every WRF gri
 ├── README.md
 ├── modis_cglc_lcz.md
 ├── frc_urb2d.md
-├── custom_geodata.md
 └── geogrid_tbl_examples.md
 ```
 
@@ -104,33 +103,9 @@ Applications:
 
 ---
 
-## 3. custom_geodata.md
-
-Guide for adding user-defined geographical datasets into WRF/WPS.
-
-This section explains how researchers can integrate datasets that are not included in the default WPS geographical database.
-
-Topics covered:
-
-- Creating custom geographical fields
-- Data formatting requirements
-- Projection requirements
-- Resolution considerations
-- Binary data preparation
-- Index file creation
-- `GEOGRID.TBL` modification
-- Testing custom datasets
-
-Examples:
-
-- Local urban datasets
-- High-resolution land-use products
-- Regional vegetation datasets
-- Research-specific surface parameters
-
 ---
 
-## 4. geogrid_tbl_examples.md
+## 3. geogrid_tbl_examples.md
 
 Documentation and examples for modifying the WPS `GEOGRID.TBL` file.
 
@@ -162,7 +137,7 @@ WPS_GEOG/
 │
 ├── vegetation/
 │
-├── modis_lcz/
+├── modis_cglc_lcz/
 │
 ├── frc_urb2d/
 │
@@ -191,7 +166,7 @@ Example:
 |---------|-------------|-----------|
 | USGS Land Use | Traditional land-use classification | geogrid.exe |
 | MODIS Land Cover | Updated satellite-based land classification | geogrid.exe |
-| MODIS LCZ | Urban morphology classification | geogrid.exe |
+| MODIS CGLC LCZ | Urban morphology classification | geogrid.exe |
 | FRC_URB2D | Urban land fraction | geogrid.exe |
 | GMTED / ASTER | Terrain elevation | geogrid.exe |
 | Soil Categories | Soil properties | geogrid.exe |
@@ -258,51 +233,6 @@ To visualize grids:
 ```bash
 ncl util/plotgrids_new.ncl
 ```
-
----
-
-# Troubleshooting Common Issues
-
-## Missing geographical variable
-
-Error example:
-
-```
-Missing XXX in GEOGRID.TBL
-```
-
-Possible causes:
-
-- Dataset not installed
-- Incorrect directory structure
-- Missing `GEOGRID.TBL` entry
-
----
-
-## Incorrect dataset resolution
-
-Symptoms:
-
-- Unrealistic land-use distribution
-- Incorrect urban representation
-- Unexpected model behaviour
-
-Solution:
-
-- Verify dataset resolution
-- Check interpolation method
-- Use appropriate high-resolution datasets
-
----
-
-## geogrid.exe failure
-
-Check:
-
-- `geogrid.log`
-- Dataset permissions
-- File paths
-- `GEOGRID.TBL` configuration
 
 ---
 
