@@ -75,10 +75,9 @@ Documentation for integrating CGLC MODIS LCZ data into WRF.
 
 Topics covered:
 
-* LCZ dataset overview
-* Installation and directory placement
-* `GEOGRID.TBL.ARW_LCZ` configuration
-* Running `geogrid.exe` with LCZ data and example images
+* CGLC-MODIS-LCZ dataset overview and LCZ classification
+* WRF-WPS integration through `GEOGRID.TBL` and `namelist.wps`
+* Verification and visualization of LCZ land-use data
 
 Applications: Enhanced representation of urban morphology for urban climate and urban heat island simulations in WRF.
 
@@ -90,10 +89,9 @@ Documentation for the `FRC_URB2D` (urban fraction) geographical variable.
 
 Topics covered:
 
-* Global Urban fraction dataset overview
-* Integration with urban parameterization schemes
-* Data preparation
-* Visualization and example images
+* Global urban fraction dataset overview
+* Integration into WRF-WPS through geogrid.exe
+* Verification and visualization of FRC_URB2D
 
 Applications: Urban meteorology, urban climate studies, and improved urban land-surface representation in WRF simulations.
 
