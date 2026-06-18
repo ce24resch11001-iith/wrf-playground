@@ -63,7 +63,6 @@ Documentation for downloading and installing WPS geographical datasets.
 Topics covered:
 
 * WPS geographical data overview
-* Mandatory dataset downloads
 * Dataset installation
 * `geog_data_path` configuration
 * Installation verification
@@ -79,13 +78,9 @@ Topics covered:
 * LCZ dataset overview
 * Installation and directory placement
 * `GEOGRID.TBL.ARW_LCZ` configuration
-* Running `geogrid.exe` with LCZ data
+* Running `geogrid.exe` with LCZ data and example images
 
-Applications:
-
-* Urban climate simulations
-* Urban heat island studies
-* Urban canopy modelling
+Applications: Enhanced representation of urban morphology for urban climate and urban heat island simulations in WRF.
 
 ---
 
@@ -95,16 +90,12 @@ Documentation for the `FRC_URB2D` (urban fraction) geographical variable.
 
 Topics covered:
 
-* Global Urban fraction datasets
+* Global Urban fraction dataset overview
 * Integration with urban parameterization schemes
 * Data preparation
-* Visualization
+* Visualization and example images
 
-Applications:
-
-* Urban meteorology
-* Urban land-surface representation
-* High-resolution WRF simulations
+Applications: Urban meteorology, urban climate studies, and improved urban land-surface representation in WRF simulations.
 
 ---
 
@@ -155,40 +146,32 @@ The geographical data location is specified in `namelist.wps`:
 
 ---
 
-## Common Geographical Datasets
+## Common Geographical Variables and Datasets
 
-| Dataset             | Purpose                            |
-| ------------------- | ---------------------------------- |
-| MODIS Land Cover    | Land-use classification            |
-| MODIS CGLC-LCZ      | Urban morphology classification    |
-| FRC_URB2D           | Urban fraction                     |
-| GMTED2010           | Terrain elevation                  |
-| Soil Categories     | Soil properties                    |
-| Vegetation Fraction | Surface vegetation characteristics |
+The table below lists some commonly used geographical variables available in WRF geographical datasets and `geo_em.d0*.nc` files.
 
----
+| WRF Variable | Description | Example Dataset |
+|--------------|-------------|-----------------|
+| `HGT_M` | Terrain elevation | GMTED2010 |
+| `LU_INDEX` | Dominant land-use category | MODIS Land Cover |
+| `LANDUSEF` | Fractional land-use coverage | MODIS Land Cover, CGLC MODIS-LCZ |
+| `FRC_URB2D` | Urban fraction within a grid cell | Global Urban Fraction Dataset |
+| `SOILTYP` | Soil category | WPS Soil Datasets |
+| `GREENFRAC` | Monthly vegetation fraction | MODIS Green Fraction |
+| `ALBEDO12M` | Monthly surface albedo | MODIS Albedo |
+| `URB_PARAM`* | Urban canopy parameters | Urban parameter datasets |
 
-## Resolution Considerations (Example)
+\* Available when urban datasets and parameterizations are configured.
 
-| WRF Resolution | Recommended Dataset Type                    |
-| -------------- | ------------------------------------------- |
-| 27–9 km        | Default WPS geographical data               |
-| 3–1 km         | High-resolution land-use and urban datasets |
-| <1 km          | Local or custom datasets                    |
+## Resolution Considerations
 
-For urban simulations, higher-resolution geographical datasets are generally preferred.
+The benefit of high-resolution geographical datasets generally increases as model resolution becomes finer. For urban and convection-permitting simulations (≤3 km), datasets such as LCZ and urban fraction products can improve surface representation compared to default WPS datasets.
 
 ---
 
 ## Dataset Priority
 
-When multiple datasets provide the same geographical variable, dataset selection is controlled through linked `GEOGRID.TBL`.
-
-Example:
-
-```text
-MODIS LCZ > MODIS Land Cover > USGS Land Use
-```
+When multiple datasets provide the same geographical variable, the dataset used by `geogrid.exe` is determined by the corresponding `GEOGRID.TBL` configuration.
 
 ---
 
@@ -215,7 +198,7 @@ Download dataset
         ↓
 Install into WPS_GEOG
         ↓
-Update GEOGRID.TBL (if required)
+Update linked GEOGRID.TBL (if required)
         ↓
 Run geogrid.exe
         ↓
