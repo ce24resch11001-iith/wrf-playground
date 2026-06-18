@@ -45,18 +45,18 @@ The generated `geo_em.d0*.nc` files contain static geographical information for 
 02_Geographical_Data/
 │
 ├── README.md
-├── static_geographic_data.md
+├── 01_static_geographic_data.md
 ├── cglc_modis_lcz.md
 ├── frc_urb2d.md
-├── common_errors.md
-└── geogrid_tbl_examples.md
+├── GEOGRID.TBL.ARW_LCZ
+└── common_errors.md
 ```
 
 ---
 
 ## Documentation Files
 
-### `static_geographic_data.md` (mandatory)
+### `01_static_geographic_data.md` (mandatory)
 
 Documentation for downloading and installing WPS geographical datasets.
 
@@ -108,16 +108,12 @@ Applications:
 
 ---
 
-### `geogrid_tbl_examples.md`
+### `GEOGRID.TBL.ARW_LCZ` (Example File)
 
-Documentation and examples for modifying `GEOGRID.TBL`.
+Includes:
 
-Topics covered:
-
-* File structure
-* Dataset priority
-* Interpolation methods
-* Custom geographical variables
+* Integrating `cglc_modis_lcz` dataset (`line 24-29` as `LANDUSEF`)
+* Integrating `frc_urb2d` dataset (`line 438-445` as `FRC_URB2D`)
 
 ---
 
