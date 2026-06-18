@@ -242,15 +242,15 @@ rel_path=default:urb_fraction_100m/
 
 ```text
 Urban Fraction Dataset Download
-                ↓
+        ↓
 Extract into WPS_GEOG
-                ↓
+        ↓
 Configure GEOGRID.TBL
-                ↓
+        ↓
 Run geogrid.exe
-                ↓
+        ↓
 Generate geo_em.d0*.nc
-                ↓
+        ↓
 Verify FRC_URB2D
 ```
 
