@@ -161,13 +161,9 @@ The table below lists some commonly used geographical variables available in WRF
 
 \* Available when urban datasets and parameterizations are configured.
 
-## Resolution Considerations
+## Dataset Selection Considerations
 
 The benefit of high-resolution geographical datasets generally increases as model resolution becomes finer. For urban and convection-permitting simulations (≤3 km), datasets such as LCZ and urban fraction products can improve surface representation compared to default WPS datasets.
-
----
-
-## Dataset Priority
 
 When multiple datasets provide the same geographical variable, the dataset used by `geogrid.exe` is determined by the corresponding `GEOGRID.TBL` configuration.
 
