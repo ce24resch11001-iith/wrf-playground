@@ -91,7 +91,7 @@ Topics covered:
 
 * Global urban fraction dataset overview
 * Integration into WRF-WPS through geogrid.exe
-* Verification and visualization of FRC_URB2D
+* Verification and visualization of `FRC_URB2D`
 
 Applications: Urban meteorology, urban climate studies, and improved urban land-surface representation in WRF simulations.
 
