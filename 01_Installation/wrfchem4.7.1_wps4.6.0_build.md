@@ -396,7 +396,7 @@ metgrid.exe
 
 ---
 
-# Final Verification
+## Final Verification
 
 ```bash
 nc-config --all
@@ -412,7 +412,7 @@ ls $WRFCHEM_HOME/WPS-4.6.0/*.exe
 
 You are finished when all of the following exist.
 
-# WRF-Chem
+## WRF-Chem
 
 ```text
 real.exe
@@ -421,7 +421,7 @@ ndown.exe
 tc.exe
 ```
 
-# WPS
+## WPS
 
 ```text
 geogrid.exe
