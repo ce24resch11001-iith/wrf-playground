@@ -160,7 +160,7 @@ The dataset is implemented through:
 
 - Tiled binary geographical files
 - Index files
-- GEOGRID.TBL configuration
+- `GEOGRID.TBL.ARW_LCZ` configuration (linked as `GEOGRID.TBL`)
 
 Processing is performed during:
 
@@ -188,7 +188,7 @@ WPS_GEOG/
 
 ---
 
-## GEOGRID.TBL Configuration
+## GEOGRID.TBL.ARW_LCZ Configuration
 
 File:
 
@@ -196,7 +196,7 @@ File:
 WPS/geogrid/GEOGRID.TBL.ARW_LCZ
 ```
 
-Enable the LCZ configuration by creating a symbolic link:
+Enable the LCZ configuration by creating a symbolic link as `GEOGRID.TBL`:
 
 ```bash
 cd WPS/geogrid/
@@ -216,7 +216,7 @@ Expected output:
 GEOGRID.TBL -> GEOGRID.TBL.ARW_LCZ
 ```
 
-Dataset entry (see `GEOGRID.TBL.ARW_LCZ` `(line 24)`for example)::
+Dataset entry (see `GEOGRID.TBL.ARW_LCZ` `(line 24-29)`for example)::
 
 ```text
 name=LANDUSEF
