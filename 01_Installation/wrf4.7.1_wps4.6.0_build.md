@@ -202,11 +202,34 @@ make install
 
 ---
 
-## Export WPS Variables
+## Export all Variables
+
+Also, Suggested to logout once and export all variables:
 
 ```bash
+module purge
+
+module load gcc
+module load openmpi
+module load cmake
+
+export CC=gcc
+export CXX=g++
+export FC=gfortran
+export F77=gfortran
+
+export DIR=$HOME/WRF_BUILD/Libs
+
+export PATH=$DIR/bin:$PATH
+export LD_LIBRARY_PATH=$DIR/lib:$LD_LIBRARY_PATH
+
+export NETCDF=$DIR
+export HDF5=$DIR
+
 export JASPERLIB=$DIR/lib
 export JASPERINC=$DIR/include
+
+ulimit -s unlimited
 ```
 
 ---
