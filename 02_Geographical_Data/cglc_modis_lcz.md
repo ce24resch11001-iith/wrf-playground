@@ -181,11 +181,19 @@ https://www2.mmm.ucar.edu/wrf/src/wps_files/cglc_modis_lcz_global.tar.gz
 Extract into:
 
 ```
+tar -xvzf cglc_modis_lcz_global.tar.gz
+
+```
+After extraction, the directory structure should be:
+
+```
 WPS_GEOG/
 
 └── CGLC_MODIS_LCZ_global/
+    ├── index
+    ├── 00001-00250.00001-00250
+    ├── ...
 ```
-
 ---
 
 ## GEOGRID.TBL.ARW_LCZ Configuration
