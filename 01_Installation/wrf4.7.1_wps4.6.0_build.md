@@ -234,9 +234,17 @@ ulimit -s unlimited
 
 ---
 
-## Verify Libraries
+## Verify Compilers and Libraries
 
 ```bash
+which gcc
+which gfortran
+which mpicc
+which mpif90
+
+nc-config --version
+nf-config --version
+
 which nc-config
 which nf-config
 
