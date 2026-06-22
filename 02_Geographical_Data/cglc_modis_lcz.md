@@ -178,17 +178,19 @@ Source:
 https://www2.mmm.ucar.edu/wrf/src/wps_files/cglc_modis_lcz_global.tar.gz
 ```
 
-Extract into:
+Download and extract the dataset inside your `WPS_GEOG` directory:
 
 ```
-tar -xvzf cglc_modis_lcz_global.tar.gz
+cd WPS_GEOG/
 
+wget https://www2.mmm.ucar.edu/wrf/src/wps_files/cglc_modis_lcz_global.tar.gz
+
+tar -xvzf cglc_modis_lcz_global.tar.gz
 ```
 After extraction, the directory structure should be:
 
 ```
 WPS_GEOG/
-
 └── CGLC_MODIS_LCZ_global/
     ├── index
     ├── 00001-00250.00001-00250
