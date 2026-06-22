@@ -337,7 +337,7 @@ export WRF_DIR=$WRF_HOME/WRFV4.7.1
 Choose:
 
 ```text
-Linux x86_64, gfortran, dmpar
+3 = Linux x86_64, gfortran (dmpar)
 ```
 
 ## Compile
