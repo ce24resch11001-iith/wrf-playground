@@ -13,10 +13,8 @@ This directory contains practical scripts used to download ERA5 datasets for WRF
 This section covers:
 
 - ERA5 data acquisition using CDS API
-- ERA5 single-level data download
-- ERA5 pressure-level data download
-- Same-month simulations
-- Consecutive-month simulations
+- ERA5 single-level and pressure-level data download
+- Same-month and consecutive-month data download scripts
 - HPC-based automated downloading using Slurm
 - ERA5 domain selection for Indian urban simulations
 - Preparation of ERA5 datasets for WRF and WPS workflows
@@ -29,15 +27,14 @@ The Climate Data Store Application Programming Interface (CDS API) is the offici
 
 Using CDS API allows users to:
 
-- Automate data downloads
-- Download large datasets efficiently
+- Automate and download large datasets efficiently
 - Create reproducible workflows
 - Execute downloads directly on Linux servers and HPC systems
 - Avoid manual web-interface downloads
 
 ### Installation
 
-```bash
+```
 pip install cdsapi
 ```
 
@@ -47,13 +44,13 @@ Create a CDS account and obtain an API key from the Climate Data Store.
 
 Create:
 
-```text
+```
 ~/.cdsapirc
 ```
 
 Example:
 
-```text
+````
 url: https://cds.climate.copernicus.eu/api
 key: <UID>:<API_KEY>
 ```
@@ -64,7 +61,7 @@ Once configured, ERA5 datasets can be downloaded directly through Python scripts
 
 ## Files Included
 
-```text
+```
 ERA5/
 ├── era5_surface_same_months.py
 ├── era5_pressure_same_months.py
@@ -81,29 +78,20 @@ ERA5/
 
 The example scripts use the following geographical subset:
 
-```python
+```
 "area": [55, 40, -10, 120]
 ```
 
 where:
 
-```text
+```
 North = 55°N
 West  = 40°E
 South = 10°S
 East  = 120°E
 ```
 
-This domain encompasses:
-
-- Indian subcontinent
-- Arabian Sea
-- Bay of Bengal
-- Himalayan region
-- South Asia
-- Adjacent oceanic regions required for regional atmospheric simulations
-
-The selected region is sufficiently large to support multiple WRF domains centered over major Indian cities while maintaining adequate boundary coverage.
+This domain encompasses Indian subcontinent and adjacent oceanic regions required for regional atmospheric simulations. The selected region is sufficiently large to support multiple WRF domains centered over major Indian cities while maintaining adequate boundary coverage.
 
 ---
 
@@ -118,26 +106,17 @@ The repository includes a visualization showing:
 
 Image:
 
-```text
+```
 WRF_All_Cities_ERA5_Domain_Map.jpg
 ```
 
 The corresponding script used to generate the figure is:
 
-```text
+```
 wrf_era5_domain_map.py
 ```
 
-The example demonstrates nested WRF domains centered over:
-
-- Delhi
-- Mumbai
-- Hyderabad
-- Kolkata
-
-and can be used as a reference when selecting ERA5 download boundaries for urban and regional climate studies.
-
-The ERA5 boundary is intentionally larger than the WRF outermost domain to ensure sufficient meteorological information is available during preprocessing and model integration.
+The example demonstrates nested WRF domains centered over Delhi, Mumbai, Hyderabad, Kolkata and can be used as a reference when selecting ERA5 download boundaries for urban and regional climate studies. The ERA5 boundary is intentionally larger than the WRF outermost domain to ensure sufficient meteorological information is available during preprocessing and model integration.
 
 ---
 
@@ -196,7 +175,7 @@ This script downloads surface and near-surface variables required by WRF.
 
 File:
 
-```text
+```
 era5_pressure_same_months.py
 ```
 
@@ -215,7 +194,7 @@ This script downloads three-dimensional atmospheric fields required for WRF init
 
 The following ERA5 pressure levels are retrieved:
 
-```text
+```
 1000, 975, 950, 925, 900, 875, 850, 825, 800, 775,
 750, 700, 650, 600, 550, 500, 450, 400, 350, 300,
 250, 225, 200, 175, 150, 125, 100, 70, 50, 30,
@@ -232,19 +211,19 @@ The following scripts are designed for simulation periods occurring entirely wit
 
 ### Surface Data
 
-```text
+```
 era5_surface_same_months.py
 ```
 
 ### Pressure-Level Data
 
-```text
+```
 era5_pressure_same_months.py
 ```
 
 Example:
 
-```text
+```
 17 May 2023 – 21 May 2023
 ```
 
@@ -256,7 +235,7 @@ Some WRF simulations span across multiple calendar months.
 
 Examples include:
 
-```text
+```
 28 Apr – 02 May
 29 Jun – 03 Jul
 30 Dec – 03 Jan
@@ -266,13 +245,13 @@ Separate scripts are provided for these situations.
 
 ### Surface Data
 
-```text
+```
 era5_surface_consecutive_months.py
 ```
 
 ### Pressure-Level Data
 
-```text
+```
 era5_pressure_consecutive_months.py
 ```
 
@@ -287,7 +266,7 @@ All scripts retrieve:
 - Hourly ERA5 data
 - 24 time steps per day
 
-```text
+```
 00:00, 01:00, 02:00, ..., 22:00, 23:00
 ```
 
@@ -299,7 +278,7 @@ Hourly forcing is commonly used for generating WRF initial and boundary conditio
 
 A sample Slurm submission script is provided:
 
-```text
+```
 submit_era5.sh
 ```
 
@@ -315,20 +294,20 @@ submit_era5.sh
 
 ### Load Python Environment
 
-```bash
+```
 module load python
 ```
 
 ### Execute Download Scripts
 
-```bash
+```
 python era5_surface_same_months.py
 python era5_pressure_same_months.py
 ```
 
 ### Submit Job
 
-```bash
+```
 sbatch submit_era5.sh
 ```
 
@@ -340,7 +319,7 @@ Additional download scripts may be enabled by uncommenting the corresponding lin
 
 The downloaded ERA5 datasets are subsequently used within the WRF preprocessing workflow:
 
-```text
+```
 ERA5 Download
       ↓
 GRIB Files
