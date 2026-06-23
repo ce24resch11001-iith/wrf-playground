@@ -50,7 +50,7 @@ Create:
 
 Example:
 
-````
+```
 url: https://cds.climate.copernicus.eu/api
 key: <UID>:<API_KEY>
 ```
