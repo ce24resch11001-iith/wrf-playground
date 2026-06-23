@@ -90,8 +90,9 @@ West  = 40°E
 South = 10°S
 East  = 120°E
 ```
+![WRF ERA5 Domain](WRF_All_Cities_ERA5_Domain_Map.jpg)
 
-This domain encompasses Indian subcontinent and adjacent oceanic regions required for regional atmospheric simulations. The selected region is sufficiently large to support multiple WRF domains centered over major Indian cities while maintaining adequate boundary coverage.
+This domain encompasses Indian subcontinent and adjacent oceanic regions required for regional atmospheric simulations. Note that the selected region is sufficiently large to support multiple WRF domains centered over major Indian cities while maintaining adequate boundary coverage.
 
 ---
 
