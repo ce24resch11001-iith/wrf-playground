@@ -266,6 +266,9 @@ Resolution: 1 km
 
 Example Images:
 
+<img width="1648" height="1288" alt="FRC_URB2D" src="https://github.com/user-attachments/assets/d5a07199-0cac-4b26-bdb3-0358b2d76e9f" />
+<p align="center">Spatial distribution of FRC_URB2D for Kolkata (top-left), Mumbai (top-right), Hyderabad (bottom-left), and Delhi (bottom-right). Higher values indicate a greater fraction of urban land within each model grid cell (1 km), representing the spatial extent of urbanization across the four cities.</p>
+
 ```text
 - Hyderabad : images/hyderabad_frc_urb2d_1km.png
 - Delhi     : images/delhi_frc_urb2d_1km.png
