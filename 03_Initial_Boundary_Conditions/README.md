@@ -1,4 +1,4 @@
-# 03_Initial_Boundary_Conditions
+# 3 - Initial and Boundary Conditions
 
 Initial and Boundary Condition (ICBC) datasets provide the large-scale atmospheric information required to initialize and drive Weather Research and Forecasting (WRF) simulations. The choice of forcing dataset influences model performance, computational requirements, and suitability for specific research applications.
 
