@@ -86,11 +86,18 @@ Directory:
 The general workflow for using atmospheric forcing datasets within WRF is:
 
 ```text
-Global Dataset
+Choose Dataset
+(ERA5 / FNL / GFS etc.)
       ↓
-Data Download
+Access Data Source
       ↓
-WPS Ungrib
+Select Time Period
+      ↓
+Download Data (GRIBFILE)
+      ↓
+./linkgrib File
+      ↓
+WPS ungrib
       ↓
 Metgrid Processing
       ↓
