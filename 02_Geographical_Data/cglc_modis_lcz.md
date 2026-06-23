@@ -365,6 +365,11 @@ Resolution: 1 km
 ```
 
 Example Images:
+
+<img width="2231" height="1445" alt="CGLC_MODIS_LCZ" src="https://github.com/user-attachments/assets/7fea84e5-60aa-4a7d-b6e6-512374ff1f7d" />
+
+<p align="center">CGLC-MODIS- Local Climate Zones for Kolkata (top-left), Delhi (top-right), Hyderabad (bottom-left), and Mumbai (bottom-right) depicting variations in urban morphology and land-cover characteristics.</p>
+
 ```
 - Hyderabad : images/hyderabad_cglc_modis_lcz_1km.png
 - Delhi : images/delhi_cglc_modis_lcz_1km.png
