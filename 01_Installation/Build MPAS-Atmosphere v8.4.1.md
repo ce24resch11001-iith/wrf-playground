@@ -470,5 +470,3 @@ ls -lh atmosphere_model
 ```
 
 MPAS-Atmosphere v8.4.1 installation is complete.
-
-```
