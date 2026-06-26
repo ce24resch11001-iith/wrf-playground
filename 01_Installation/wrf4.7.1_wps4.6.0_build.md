@@ -218,7 +218,9 @@ export CXX=g++
 export FC=gfortran
 export F77=gfortran
 
-export DIR=$HOME/WRF_BUILD/Libs
+export SCRATCH=$(pwd)
+export WRF_HOME=$SCRATCH/WRF_BUILD
+export DIR=$WRF_HOME/Libs
 
 export PATH=$DIR/bin:$PATH
 export LD_LIBRARY_PATH=$DIR/lib:$LD_LIBRARY_PATH
